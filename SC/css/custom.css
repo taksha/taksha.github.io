@@ -1,0 +1,51 @@
+/**
+ * This is the custom CSS stylesheet that contains commong styles used across all portals.
+ * 
+ * Last taken from revision: 1;
+ **/
+body {
+	background-color: #952927;
+    color:#EE9442;
+   	font-color:#C05B4D;
+   	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";       /* IE 8 */
+	filter: alpha(opacity=90);  /* IE 5-7 */
+	-moz-opacity: 0.9;          /* Netscape */
+	-khtml-opacity: 0.9;        /* Safari 1.x */
+	opacity: 0.9;               /* Good browsers */
+}
+
+h4 {
+	font-color:#F0E597;
+}
+
+.login-box{
+	border:solid;
+	border-width: 1px;
+	box-shadow: 1px;
+	border-color: black;
+}
+
+.header{
+	text-align: center;
+	
+	border-color: #EE9442;
+}
+
+.footer{
+	text-align: center;
+	border-color: #EE9442;
+}
+
+.sccl{
+	color:#EE9442;
+}
+
+.lnk{
+	color:#CC7A6F;
+}
+.separated{
+	margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #424445;
+    border-color:#CC7A6F; 
+}
