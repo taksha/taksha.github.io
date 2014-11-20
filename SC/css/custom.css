@@ -19,10 +19,7 @@ h4 {
 }
 
 .login-box{
-	border:solid;
-	border-width: 1px;
-	box-shadow: 1px;
-	border-color: black;
+	width: 220px;
 }
 
 .header{
