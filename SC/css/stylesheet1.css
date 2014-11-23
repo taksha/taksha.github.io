@@ -1,0 +1,4491 @@
+/**
+ * This is the default stylesheet that contains commong styles used across all portals.
+ * 
+ * Last taken from revision 28978 of hix.min.css
+ **/
+
+.AFDefaultFontFamily:alias {
+    font-family: Arial, sans-serif;
+}
+.accent-font {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.user-entry-font {
+    font-family: Georgia, "Times New Roman", times, serif;
+}
+.text-color-default {
+    color: #42342D;
+}
+.text-color-link {
+    color: #265e95;
+}
+.text-color-link-hover {
+    color: #0260cc;
+}
+.text-color-page-heading {
+    color: #005172;
+}
+.text-color-error {
+    color: #a23f3d;
+}
+.AFDefaultFont:alias {
+    font-size: 14px;
+    font-weight: normal;
+    -tr-inhibit: white-space;
+    white-space: normal;
+}    
+.AFDefaultBoldFont:alias {
+    font-weight: bold;
+}
+.AFTextForeground:alias {
+    -tr-rule-ref: selector(".text-color-default");
+}
+.AFTextBackground:alias {
+    background: none;
+}
+.AFLinkForeground:alias,
+.AFActiveLinkForeground:alias,
+.AFVisitedLinkForeground:alias { /* Do we need to add these selectors? af|goLink, af|commandImageLink::text */
+    -tr-rule-ref: selector(".text-color-link");
+    text-decoration: underline;
+}
+.AFLinkHover:alias { /* Do we need to add these selectors? af|goLink:visited:hover, af|goLink:hover, af|commandLink:visited:hover, af|commandLink:hover */
+    -tr-rule-ref: selector(".text-color-link-hover");
+    text-decoration: underline;
+}
+.AFErrorTextForeground:alias {
+    -tr-rule-ref: selector(".text-color-error");
+}
+.AFVisitedLinkBackground:alias {
+    background: transparent;
+}
+.AFActiveLinkBorder:alias,
+.AFVisitedLinkBorder:alias {
+    border: none;
+}
+af|panelHeader .af_panelHeader_title-text-cell,
+af|panelHeader::title0 {
+    overflow: visible;
+}
+af|panelHeader::title-start0,
+af|panelHeader::title-end0 {
+  min-width: 0;
+  width: 0;
+}
+af|panelHeader::title-text0 {
+    -tr-inhibit: color;
+    -tr-inhibit: font-family;
+    -tr-inhibit: font-size;
+    -tr-inhibit: font-weight;
+    -tr-inhibit: display;
+    -tr-inhibit: margin;
+    white-space: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+    line-height: 1.25;
+    white-space: normal;
+}
+.page-header h1 {
+    margin-bottom: 0.5em;
+}
+h1, .h1 {
+    -tr-rule-ref: selector(".accent-font");
+    -tr-rule-ref: selector(".text-color-page-heading");
+    font-size: 1.55em;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1;
+}
+h2, .h2 {
+    font-size: 1.25em;
+    font-family: Verdana;
+    font-weight: normal;
+    margin-top: 15px;
+}
+h3, .h3 {
+    font-size: 1.10em;
+    color: inherit;
+}
+.bold-font {
+    -tr-rule-ref: selector(".AFDefaultBoldFont:alias");
+    -tr-inhibit: font-size;
+}
+.bold-big-font {
+    display: block;
+    font-weight: bold;
+    font-size: 1.35em;
+}
+.upper-case-font {
+    text-transform: uppercase;
+}
+af|inputDate::label,
+af|inputText::label, af|outputLabel,
+af|commandLink.label-link,
+af|selectManyCheckbox::label,
+.small {
+    font-size: 0.857em;
+}
+af|panelHeader.has-help-tips af|panelHeader::title-table {
+    width: auto;
+}
+af|panelHeader.has-help-tips af|panelHeader::title-text1 {
+    float: left;
+}
+af|outputLabel.has-help-tips {
+    padding-right: 5px;
+}
+af|panelGroupLayout {
+    display: block;
+    -tr-inhibit: font-size;
+}
+.left-sidebar {
+    width: 180px;
+}
+af|panelGroupLayout.application-container td {
+    vertical-align: top;
+}
+
+/* Begin Grid Layout */
+.container { width: 940px; margin-right: auto; margin-left: auto; }
+af|panelGroupLayout[class^="span"], af|panelFormLayout[class^="span"] { margin-left: 20px; }
+af|panelGroupLayout.row-fluid [class*="span"], af|panelFormLayout.row-fluid [class*="span"] { margin-left: 2.127659574468085%; float: left; }
+af|panelGroupLayout.row-fluid af|inputText[class*="span"], af|panelFormLayout.row-fluid af|inputText[class*="span"] { margin-left: 0; float: none; }
+af|panelGroupLayout.first-child, af|panelFormLayout.first-child { margin-left: 0 !important; }
+.span24, .span24 af|inputText::content, .span24 af|inputDate::content .span24 af|selectOneChoice::content, .span24 af|selectManyChoice::content { width: 940px; }
+.span23, .span23 af|inputText::content, .span23 af|inputDate::content, .span23 af|selectOneChoice::content, .span23 af|selectManyChoice::content { width: 900px; }
+.span22, .span22 af|inputText::content, .span22 af|inputDate::content, .span22 af|selectOneChoice::content, .span22 af|selectManyChoice::content { width: 860px; }
+.span21, .span21 af|inputText::content, .span21 af|inputDate::content, .span21 af|selectOneChoice::content, .span21 af|selectManyChoice::content { width: 820px; }
+.span20, .span20 af|inputText::content, .span20 af|inputDate::content, .span20 af|selectOneChoice::content, .span20 af|selectManyChoice::content { width: 780px; }
+.span19, .span19 af|inputText::content, .span19 af|inputDate::content, .span19 af|selectOneChoice::content, .span19 af|selectManyChoice::content { width: 740px; }
+.span18, .span18 af|inputText::content, .span18 af|inputDate::content, .span18 af|selectOneChoice::content, .span18 af|selectManyChoice::content { width: 700px; }
+.span17, .span17 af|inputText::content, .span17 af|inputDate::content, .span17 af|selectOneChoice::content, .span17 af|selectManyChoice::content { width: 660px; }
+.span16, .span16 af|inputText::content, .span16 af|inputDate::content, .span16 af|selectOneChoice::content, .span16 af|selectManyChoice::content { width: 620px; }
+.span15, .span15 af|inputText::content, .span15 af|inputDate::content, .span15 af|selectOneChoice::content, .span15 af|selectManyChoice::content { width: 580px; }
+.span14, .span14 af|inputText::content, .span14 af|inputDate::content, .span14 af|selectOneChoice::content, .span14 af|selectManyChoice::content { width: 540px; }
+.span13, .span13 af|inputText::content, .span13 af|inputDate::content, .span13 af|selectOneChoice::content, .span13 af|selectManyChoice::content { width: 500px; }
+.span12, .span12 af|inputText::content, .span12 af|inputDate::content, .span12 af|selectOneChoice::content, .span12 af|selectManyChoice::content { width: 460px; }
+.span11, .span11 af|inputText::content, .span11 af|inputDate::content, .span11 af|selectOneChoice::content, .span11 af|selectManyChoice::content { width: 420px; }
+.span10, .span10 af|inputText::content, .span10 af|inputDate::content, .span10 af|selectOneChoice::content, .span10 af|selectManyChoice::content { width: 380px; }
+.span9, .span9 af|inputText::content, .span9 af|inputDate::content, .span9 af|selectOneChoice::content, .span9 af|selectManyChoice::content { width: 340px; }
+.span8, .span8 af|inputText::content, .span8 af|inputDate::content, .span8 af|selectOneChoice::content, .span8 af|selectManyChoice::content { width: 300px; }
+.span7, .span7 af|inputText::content, .span7 af|inputDate::content, .span7 af|selectOneChoice::content, .span7 af|selectManyChoice::content { width: 260px; }
+.span6, .span6 af|inputText::content, .span6 af|inputDate::content, .span6 af|selectOneChoice::content, .span6 af|selectManyChoice::content { width: 220px; }
+.span5, .span5 af|inputText::content, .span5 af|inputDate::content, .span5 af|selectOneChoice::content, .span5 af|selectManyChoice::content { width: 180px; }
+.span4, .span4 af|inputText::content, .span4 af|inputDate::content, .span4 af|selectOneChoice::content, .span4 af|selectManyChoice::content { width: 140px; }
+.span3, .span3 af|inputText::content, .span3 af|inputDate::content, .span3 af|selectOneChoice::content, .span3 af|selectManyChoice::content { width: 100px; }
+.span2, .span2 af|inputText::content, .span2 af|inputDate::content, .span2 af|selectOneChoice::content, .span2 af|selectManyChoice::content { width: 60px; }
+.span1, .span1 af|inputText::content, .span1 af|inputDate::content, .span1 af|selectOneChoice::content, .span1 af|selectManyChoice::content { width: 20px; }
+af|panelGroupLayout.offset24, af|panelFormLayout.offset24  { margin-left: 980px; }
+af|panelGroupLayout.offset23, af|panelFormLayout.offset23 { margin-left: 940px; }
+af|panelGroupLayout.offset22, af|panelFormLayout.offset22 { margin-left: 900px; }
+af|panelGroupLayout.offset21, af|panelFormLayout.offset21 { margin-left: 860px; }
+af|panelGroupLayout.offset20, af|panelFormLayout.offset20 { margin-left: 820px; }
+af|panelGroupLayout.offset19, af|panelFormLayout.offset19 { margin-left: 780px; }
+af|panelGroupLayout.offset18, af|panelFormLayout.offset18 { margin-left: 740px; }
+af|panelGroupLayout.offset17, af|panelFormLayout.offset17 { margin-left: 700px; }
+af|panelGroupLayout.offset16, af|panelFormLayout.offset16 { margin-left: 660px; }
+af|panelGroupLayout.offset15, af|panelFormLayout.offset15 { margin-left: 620px; }
+af|panelGroupLayout.offset14, af|panelFormLayout.offset14 { margin-left: 580px; }
+af|panelGroupLayout.offset13, af|panelFormLayout.offset13 { margin-left: 540px; }
+af|panelGroupLayout.offset12, af|panelFormLayout.offset12 { margin-left: 500px; }
+af|panelGroupLayout.offset11, af|panelFormLayout.offset11 { margin-left: 460px; }
+af|panelGroupLayout.offset10, af|panelFormLayout.offset10 { margin-left: 420px; }
+af|panelGroupLayout.offset9, af|panelFormLayout.offset9 { margin-left: 380px; }
+af|panelGroupLayout.offset8, af|panelFormLayout.offset8 { margin-left: 340px; }
+af|panelGroupLayout.offset7, af|panelFormLayout.offset7 { margin-left: 300px; }
+af|panelGroupLayout.offset6, af|panelFormLayout.offset6 { margin-left: 260px; }
+af|panelGroupLayout.offset5, af|panelFormLayout.offset5 { margin-left: 220px; }
+af|panelGroupLayout.offset4, af|panelFormLayout.offset4 { margin-left: 180px; }
+af|panelGroupLayout.offset3, af|panelFormLayout.offset3 { margin-left: 140px; }
+af|panelGroupLayout.offset2, af|panelFormLayout.offset2 { margin-left: 100px; }
+af|panelGroupLayout.offset1, af|panelFormLayout.offset1 { margin-left: 60px; }
+.row-fluid { width: 100%; overflow: hidden; }
+.row-fluid .span24 { width: 100%; }
+.row-fluid .span23 { width: 95.74468085106383%; }
+.row-fluid .span22 { width: 91.48936170212767%; }
+.row-fluid .span21 { width: 87.23404255319149%; }
+.row-fluid .span20 { width: 82.97872340425532%; }
+.row-fluid .span19 { width: 78.72340425531914%; }
+.row-fluid .span18 { width: 74.46808510638297%; }
+.row-fluid .span17 { width: 70.2127659574468%; }
+.row-fluid .span16 { width: 65.95744680851064%; }
+.row-fluid .span15 { width: 61.70212765957447%; }
+.row-fluid .span14 { width: 57.44680851063829%; }
+.row-fluid .span13 { width: 53.191489361702125%; }
+.row-fluid .span12 { width: 48.93617021276596%; }
+.row-fluid .span11 { width: 44.68085106382979%; }
+.row-fluid .span10 { width: 40.42553191489361%; }
+.row-fluid .span9 { width: 36.170212765957444%; }
+.row-fluid .span8 { width: 31.914893617021278%; }
+.row-fluid .span7 { width: 27.659574468085104%; }
+.row-fluid .span6 { width: 23.404255319148938%; }
+.row-fluid .span5 { width: 19.148936170212764%; }
+.row-fluid .span4 { width: 14.893617021276595%; }
+.row-fluid .span3 { width: 10.638297872340425%; }
+.row-fluid .span2 { width: 6.382978723404255%; }
+.row-fluid .span1 { width: 2.127659574468085%; }
+.row-fluid af|panelGroupLayout.offset24, .row-fluid af|panelFormLayout.offset24 { margin-left: 104.25531914893617%; }
+.row-fluid af|panelGroupLayout.offset23, .row-fluid af|panelFormLayout.offset23 { margin-left: 100%; }
+.row-fluid af|panelGroupLayout.offset22, .row-fluid af|panelFormLayout.offset22 { margin-left: 95.74468085106383%; }
+.row-fluid af|panelGroupLayout.offset21, .row-fluid af|panelFormLayout.offset21 { margin-left: 91.48936170212765%; }
+.row-fluid af|panelGroupLayout.offset20, .row-fluid af|panelFormLayout.offset20 { margin-left: 87.23404255319149%; }
+.row-fluid af|panelGroupLayout.offset19, .row-fluid af|panelFormLayout.offset19 { margin-left: 82.9787234042553%; }
+.row-fluid af|panelGroupLayout.offset18, .row-fluid af|panelFormLayout.offset18 { margin-left: 78.72340425531914%; }
+.row-fluid af|panelGroupLayout.offset17, .row-fluid af|panelFormLayout.offset17 { margin-left: 74.46808510638297%; }
+.row-fluid af|panelGroupLayout.offset16, .row-fluid af|panelFormLayout.offset16 { margin-left: 70.2127659574468%; }
+.row-fluid af|panelGroupLayout.offset15, .row-fluid af|panelFormLayout.offset15 { margin-left: 65.95744680851064%; }
+.row-fluid af|panelGroupLayout.offset14, .row-fluid af|panelFormLayout.offset14 { margin-left: 61.70212765957446%; }
+.row-fluid af|panelGroupLayout.offset13, .row-fluid af|panelFormLayout.offset13 { margin-left: 57.44680851063829%; }
+.row-fluid af|panelGroupLayout.offset12, .row-fluid af|panelFormLayout.offset12 { margin-left: 53.191489361702125%; }
+.row-fluid af|panelGroupLayout.offset11, .row-fluid af|panelFormLayout.offset11 { margin-left: 48.93617021276596%; }
+.row-fluid af|panelGroupLayout.offset10, .row-fluid af|panelFormLayout.offset10 { margin-left: 44.68085106382978%; }
+.row-fluid af|panelGroupLayout.offset9, .row-fluid af|panelFormLayout.offset9 { margin-left: 40.42553191489361%; }
+.row-fluid af|panelGroupLayout.offset8, .row-fluid af|panelFormLayout.offset8 { margin-left: 36.170212765957444%; }
+.row-fluid af|panelGroupLayout.offset7, .row-fluid af|panelFormLayout.offset7 { margin-left: 31.914893617021274%; }
+.row-fluid af|panelGroupLayout.offset6, .row-fluid af|panelFormLayout.offset6 { margin-left: 27.659574468085108%; }
+.row-fluid af|panelGroupLayout.offset5, .row-fluid af|panelFormLayout.offset5 { margin-left: 23.404255319148934%; }
+.row-fluid af|panelGroupLayout.offset4, .row-fluid af|panelFormLayout.offset4 { margin-left: 19.148936170212764%; }
+.row-fluid af|panelGroupLayout.offset3, .row-fluid af|panelFormLayout.offset3 { margin-left: 14.893617021276595%; }
+.row-fluid af|panelGroupLayout.offset2, .row-fluid af|panelFormLayout.offset2 { margin-left: 10.638297872340425%; }
+.row-fluid af|panelGroupLayout.offset1, .row-fluid af|panelFormLayout.offset1 { margin-left: 6.382978723404255%; }
+/*af|panelGroupLayout[class^="span"], af|panelFormLayout[class^="span"] { margin-left: 20px; }*/
+/*af|panelGroupLayout.row-fluid [class*="span"], af|panelFormLayout.row-fluid [class*="span"] { margin-left: 2.127659574468085%; float: left; }*/
+/*af|panelGroupLayout.first-child, af|panelFormLayout.first-child { margin-left: 0 !important; }*/
+
+@agent ie and (version:7) {
+    .container { zoom: 1; }
+    .row-fluid { zoom: 1; }
+    .row-fluid .span24 { width: 99.94680851063829%; }
+    .row-fluid .span23 { width: 95.69148936170212%; }
+    .row-fluid .span22 { width: 91.43617021276596%; }
+    .row-fluid .span21 { width: 87.18085106382978%; }
+    .row-fluid .span20 { width: 82.92553191489361%; }
+    .row-fluid .span19 { width: 78.67021276595743%; }
+    .row-fluid .span18 { width: 74.41489361702126%; }
+    .row-fluid .span17 { width: 70.1595744680851%; }
+    .row-fluid .span16 { width: 65.90425531914893%; }
+    .row-fluid .span15 { width: 61.64893617021277%; }
+    .row-fluid .span14 { width: 57.39361702127659%; }
+    .row-fluid .span13 { width: 53.138297872340424%; }
+    .row-fluid .span12 { width: 48.88297872340426%; }
+    .row-fluid .span11 { width: 44.62765957446809%; }
+    .row-fluid .span10 { width: 40.37234042553191%; }
+    .row-fluid .span9 { width: 36.11702127659574%; }
+    .row-fluid .span8 { width: 31.861702127659576%; }
+    .row-fluid .span7 { width: 27.606382978723403%; }
+    .row-fluid .span6 { width: 23.351063829787236%; }
+    .row-fluid .span5 { width: 19.095744680851062%; }
+    .row-fluid .span4 { width: 14.840425531914894%; }
+    .row-fluid .span3 { width: 10.585106382978724%; }
+    .row-fluid .span2 { width: 6.329787234042553%; }
+    .row-fluid .span1 { width: 2.074468085106383%; }
+    .row-fluid .offset24 { margin-left: 104.14893617021275%; }
+    .row-fluid .offset23 { margin-left: 99.89361702127658%; }
+    .row-fluid .offset22 { margin-left: 95.63829787234042%; }
+    .row-fluid .offset21 { margin-left: 91.38297872340424%; }
+    .row-fluid .offset20 { margin-left: 87.12765957446807%; }
+    .row-fluid .offset19 { margin-left: 82.87234042553189%; }
+    .row-fluid .offset18 { margin-left: 78.61702127659572%; }
+    .row-fluid .offset17 { margin-left: 74.36170212765956%; }
+    .row-fluid .offset16 { margin-left: 70.10638297872339%; }
+    .row-fluid .offset15 { margin-left: 65.85106382978724%; }
+    .row-fluid .offset14 { margin-left: 61.59574468085106%; }
+    .row-fluid .offset13 { margin-left: 57.340425531914896%; }
+    .row-fluid .offset12 { margin-left: 53.08510638297873%; }
+    .row-fluid .offset11 { margin-left: 48.82978723404256%; }
+    .row-fluid .offset10 { margin-left: 44.57446808510638%; }
+    .row-fluid .offset9 { margin-left: 40.319148936170215%; }
+    .row-fluid .offset8 { margin-left: 36.06382978723405%; }
+    .row-fluid .offset7 { margin-left: 31.80851063829787%; }
+    .row-fluid .offset6 { margin-left: 27.553191489361705%; }
+    .row-fluid .offset5 { margin-left: 23.29787234042553%; }
+    .row-fluid .offset4 { margin-left: 19.04255319148936%; }
+    .row-fluid .offset3 { margin-left: 14.787234042553193%; }
+    .row-fluid .offset2 { margin-left: 10.53191489361702%; }
+    .row-fluid .offset1 { margin-left: 6.276595744680851%; }
+    af|panelGroupLayout.row-fluid [class*="span"] { margin-left: 2.074468085106383%; }
+}
+af|panelGroupLayout.application-container { margin-left: 0; margin-right: 0; }
+
+af|panelGroupLayout.layout-content-right-column { overflow: hidden; }
+af|panelGroupLayout.layout-content-right-column af|panelGroupLayout.layout-content { width: 520px; float: left; }
+af|panelGroupLayout.layout-content-right-column af|panelGroupLayout.layout-right-column { width: 180px; margin-left: 20px; float: left; }
+af|panelGroupLayout.layout-content-right-column af|panelGroupLayout.layout-content-half { width: 380px; float: left; }
+af|panelGroupLayout.layout-content-right-column af|panelGroupLayout.layout-right-column-half { width: 320px; float: left; margin-left: 20px; }
+/* End Grid Layout */
+
+/* Begin Buttons and Links */
+af|commandButton {
+    -tr-inhibit: padding;
+    -tr-inhibit: white-space;
+}
+af|commandButton,
+af|commandButton:active,
+af|commandButton:hover,
+af|commandButton:active:hover,
+af|commandButton:focus:hover {
+    -tr-inhibit: background-color;
+    -tr-inhibit: color;
+    -tr-inhibit: font-family;
+    -tr-inhibit: font-size;
+    -tr-inhibit: font-weight;
+}
+.af_commandButton.p_AFTextOnly,
+.af_goButton.p_AFTextOnly {
+    -tr-inhibit: background-color;
+}
+.AFButtonBackground:alias,
+.AFButtonBackgroundActive:alias,
+.AFButtonBackgroundDisabled:alias,
+.AFButtonBackgroundFocus:alias,
+.AFButtonBackgroundHover:alias {
+    -tr-inhibit: background-color;
+    -tr-inhibit: background;
+}
+.AFButtonForeground:alias,
+.AFButtonForegroundHover:alias,
+.AFButtonForegroundDepressed:alias,
+.AFButtonForegroundDisabled:alias {
+    -tr-inhibit: color;
+    -tr-inhibit: font-family;
+    -tr-inhibit: font-size;
+    -tr-inhibit: padding;
+}
+.AFVisitedLinkForeground:alias.btn,
+.AFActiveLinkForeground:alias.btn {
+    -tr-inhibit: color;
+}
+af|commandImageLink,
+af|commandImageLink::text {
+    white-space: normal;
+}
+af|goLink,
+af|commandLink, 
+af|commandLink:link, 
+af|commandLink:active, 
+af|commandLink:hover, 
+af|commandLink:visited,
+af|commandLink:focus {
+    text-decoration: underline;
+}
+af|commandButton {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+af|commandButton,
+af|commandButton.btn,
+af|commandLink.btn,
+af|goButton.btn,
+.btn,
+.login-form input[type="submit"] {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  line-height: 1.43;
+  font-size: 1em;
+  text-align: center;
+  text-decoration:none;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #bbbbbb;
+  border-bottom-color: #a2a2a2;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+}
+af|commandButton:hover,
+af|commandButton.btn:hover,
+af|commandLink.btn:hover,
+af|goButton.btn:hover,
+.btn:hover,
+af|commandButton:active,
+af|commandButton.btn:active,
+af|commandLink.btn:active,
+af|goButton.btn:active,
+.btn:active,
+af|commandButton.active,
+af|commandButton.btn.active,
+af|commandLink.btn.active,
+af|goButton.btn.active,
+.btn.active,
+af|commandButton.disabled,
+af|commandButton.btn.disabled,
+af|commandLink.btn.disabled,
+af|goButton.btn.disabled,
+.btn.disabled,
+af|commandButton[disabled],
+af|commandButton.btn[disabled],
+af|commandLink.btn[disabled],
+af|goButton.btn[disabled],
+.btn[disabled],
+.login-form input[type="submit"]:hover,
+.login-form input[type="submit"]:active,
+.login-form input[type="submit"].active,
+.login-form input[type="submit"][disabled],
+.login-form input[type="submit"].disabled {
+  color: #333333;
+}
+af|commandButton.btn-link:hover,
+af|commandLink.btn-link:hover,
+af|goButton.btn-link:hover,
+.btn-link:hover {
+    -tr-rule-ref: selector(".text-color-link-hover");
+}
+af|commandButton:hover,
+af|commandButton.btn:hover,
+af|commandLink.btn:hover,
+af|goButton.btn:hover,
+.btn:hover,
+.login-form input[type="submit"]:hover { 
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+af|commandButton.btn:focus,
+af|commandLink.btn:focus,
+af|goButton.btn:focus,
+.btn:focus,
+.login-form input[type="submit"]:focus {
+  outline: none;
+  border: 1px dashed #333;
+  text-decoration: none;
+}
+af|commandButton.btn-primary:focus,
+af|commandLink.btn-primary:focus,
+af|goButton.btn-primary:focus,
+.btn-primary:focus {
+    border: 1px dashed #FFFF00;
+}
+af|commandButton.active,
+af|commandButton.btn.active,
+af|commandLink.btn.active,
+af|goButton.btn.active,
+.btn.active,
+af|commandButton:active,
+af|commandButton.btn:active
+af|commandLink.btn:active,
+af|goButton.btn:active,
+.btn:active,
+.login-form input[type="submit"]:active{
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+}
+af|commandButton.disabled,
+af|commandButton.btn.disabled,
+af|commandLink.btn.disabled,
+af|goButton.btn.disabled,
+.btn.disabled,
+af|commandButton[disabled],
+af|commandButton.btn[disabled],
+af|commandLink.btn[disabled],
+af|goButton.btn[disabled],
+.btn[disabled],
+.login-form input[type="submit"].disabled,
+.login-form input[type="submit"][disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #e6e6e6;
+}
+.btn, .btn:hover {
+    text-decoration: none!important;
+}
+af|commandButton.btn-large,
+af|commandLink.btn-large,
+af|goButton.btn-large,
+.btn-large {
+  padding: 11px 19px;
+  font-size: 1.25em;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+af|commandButton.btn-large [class^="icon-"],
+af|commandLink.btn-large [class^="icon-"],
+af|goButton.btn-large [class^="icon-"],
+.btn-large [class^="icon-"],
+af|commandButton.btn-large [class*=" icon-"] ,
+af|commandLink.btn-large [class*=" icon-"],
+af|goButton.btn-large [class*=" icon-"],
+.btn-large [class*=" icon-"] {
+  margin-top: 4px;
+}
+af|commandButton.btn-small,
+af|commandLink.btn-small,
+af|goButton.btn-small,
+.btn-small {
+  padding: 2px 10px;
+  font-size: 0.857em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  line-height: 1.5;
+}
+af|commandButton.btn-small [class^="icon-"],
+af|commandLink.btn-small [class^="icon-"],
+af|goButton.btn-small [class^="icon-"],
+.btn-small [class^="icon-"],
+af|commandButton.btn-small [class*=" icon-"],
+af|commandLink.btn-small [class*=" icon-"],
+af|goButton.btn-small [class*=" icon-"],
+.btn-small [class*=" icon-"] {
+  margin-top: 0;
+}
+af|commandButton.btn-mini,
+af|commandLink.btn-mini,
+af|goButton.btn-mini,
+.btn-mini {
+  padding: 0 6px;
+  font-size: 0.75em;
+  line-height: 1.67em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+af|commandButton.btn-mini [class^="icon-"],
+af|commandLink.btn-mini [class^="icon-"],
+af|goButton.btn-mini [class^="icon-"],
+.btn-mini [class^="icon-"],
+af|commandButton.btn-mini [class*=" icon-"],
+af|commandLink.btn-mini [class*=" icon-"],
+af|goButton.btn-mini [class*=" icon-"],
+.btn-mini [class*=" icon-"] {
+  margin-top: -1px;
+}
+
+af|commandButton.btn-block,
+af|commandLink.btn-block,
+af|goButton.btn-block,
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+af|commandButton.btn-block + af|commandButton.btn-block,
+af|commandLink.btn-block + af|commandLink.btn-block,
+af|goButton.btn-block + af|goButton.btn-block,
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+af|commandButton.btn-primary.active,
+af|commandLink.btn-primary.active,
+af|goButton.btn-primary.active,
+.btn-primary.active,
+af|commandButton.btn-success.active,
+af|commandLink.btn-success.active,
+af|goButton.btn-success.active,
+.btn-success.active,
+.login-form input[type="submit"].btn-primary {
+  color: rgba(255, 255, 255, 0.75);
+}
+af|commandButton,
+af|commandLink.btn,
+af|goButton.btn,
+.btn {
+  border-color: #c5c5c5;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+}
+af|commandButton.btn-primary,
+af|commandLink.btn-primary,
+af|goButton.btn-primary,
+.btn-primary,
+.login-form input[type="submit"].btn-primary {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #006dcc;
+  background-image: -moz-linear-gradient(top, #265e95, #0044cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#265e95), to(#0044cc));
+  background-image: -webkit-linear-gradient(top, #265e95, #0044cc);
+  background-image: -o-linear-gradient(top, #265e95, #0044cc);
+  background-image: linear-gradient(to bottom, #265e95, #0044cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff265e95', endColorstr='#ff0044cc', GradientType=0);
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+af|commandButton.btn-primary:hover,
+af|commandLink.btn-primary:hover,
+af|goButton.btn-primary:hover,
+.btn-primary:hover,
+af|commandButton.btn-primary:active,
+af|commandLink.btn-primary:active,
+af|goButton.btn-primary:active,
+.btn-primary:active,
+af|commandLink.btn-primary.active,
+af|commandButton.btn-primary.active,
+af|goButton.btn-primary.active,
+.btn-primary.active,
+af|commandLink.btn-primary.disabled,
+af|commandButton.btn-primary.disabled,
+af|goButton.btn-primary.disabled,
+.btn-primary.disabled,
+af|commandLink.btn-primary[disabled],
+af|commandButton.btn-primary[disabled],
+af|goButton.btn-primary[disabled],
+.btn-primary[disabled],
+.login-form input[type="submit"].btn-primary:hover {
+  color: #ffffff;
+  background-color: #0044cc;
+}
+af|commandLink.btn-success,
+af|commandButton.btn-success,
+af|goButton.btn-success,
+.btn-success {
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #377A37;
+    background-image: -moz-linear-gradient(top, #489148, #377A37);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#489148), to(#377A37));
+    background-image: -webkit-linear-gradient(top, #489148, #377A37);
+    background-image: -o-linear-gradient(top, #489148, #377A37);
+    background-image: linear-gradient(to bottom, #489148, #377A37);
+    background-repeat: repeat-x;
+    border-color: #377A37;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#489148', endColorstr='#377A37', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+af|commandButton.btn-success:hover,
+af|commandLink.btn-success:hover,
+af|goButton.btn-success:hover,
+.btn-success:hover,
+af|commandButton.btn-success:active,
+af|commandLink.btn-success:active,
+af|goButton.btn-success:active,
+.btn-success:active,
+af|commandButton.btn-success.active,
+af|commandLink.btn-success.active,
+af|goButton.btn-success.active,
+.btn-success.active,
+af|commandButton.btn-success.disabled,
+af|commandLink.btn-success.disabled,
+af|goButton.btn-success.disabled,
+.btn-success.disabled,
+af|commandButton.btn-success[disabled],
+af|commandLink.btn-success[disabled],
+af|goButton.btn-success[disabled],
+.btn-success[disabled] {
+    color: #FFFFFF;
+    background-color: #377A37;
+}
+@agent ie and (version:7) {
+    
+    af|panelGroupLayout.nav-main li af|commandImageLink::image{display:inline!important;}
+    
+    af|commandButton.btn{float:left;}
+    
+    af|commandButton,
+    af|commandButton.btn,
+    af|commandLink.btn,
+    af|goButton.btn,
+    .btn {
+        display: inline;
+        zoom: 1;
+        background-color: #e6e6e6;
+        border: 0;
+        margin-left: .3em;
+    }
+    af|commandButton:first-child,
+    af|commandButton.btn:first-child,
+    af|commandLink.btn:first-child,
+    af|goButton.btn:first-child,
+    .btn:first-child {
+      margin-left: 0;
+    }
+    af|commandButton:hover,
+    af|commandButton.btn:hover,
+    af|commandLink.btn:hover,
+    af|goButton.btn:hover,
+    .btn:hover,
+    af|commandButton:active,
+    af|commandButton.btn:active,
+    af|commandLink.btn:active,
+    af|goButton.btn:active,
+    .btn:active,
+    af|commandButton.active,
+    af|commandButton.btn.active,
+    af|commandLink.btn.active,
+    af|goButton.btn.active,
+    .btn.active,
+    af|commandButton.disabled,
+    af|commandButton.btn.disabled,
+    af|commandLink.btn.disabled,
+    af|goButton.btn.disabled,
+    .btn.disabled,
+    af|commandButton[disabled],
+    af|commandButton.btn[disabled],
+    af|commandLink.btn[disabled],
+    af|goButton.btn[disabled],
+    .btn[disabled] {
+      background-color: #d9d9d9;
+    }
+    af|commandButton.btn-primary,
+    af|commandLink.btn-primary,
+    af|goButton.btn-primary,
+    .btn-primary,
+    .login-form input[type="submit"].btn-primary {
+        background-color: #0044cc;
+    }
+    af|commandButton.btn-primary:hover,
+    af|commandLink.btn-primary:hover,
+    af|goButton.btn-primary:hover,
+    .btn-primary:hover,
+    af|commandButton.btn-primary:active,
+    af|commandLink.btn-primary:active,
+    af|goButton.btn-primary:active,
+    .btn-primary:active,
+    af|commandButton.btn-primary.active,
+    af|commandLink.btn-primary.active,
+    af|goButton.btn-primary.active,
+    .btn-primary.active,
+    af|commandLink.btn-primary.disabled,
+    af|commandButton.btn-primary.disabled,
+    af|goButton.btn-primary.disabled,
+    .btn-primary.disabled,
+    af|commandLink.btn-primary[disabled],
+    af|commandButton.btn-primary[disabled],
+    af|goButton.btn-primary[disabled],
+    .btn-primary[disabled],
+    .login-form input[type="submit"].btn-primary:hover,
+    .login-form input[type="submit"].btn-primary:active,
+    .login-form input[type="submit"].btn-primary.active,
+    .login-form input[type="submit"].btn-primary.disabled,
+    .login-form input[type="submit"].btn-primary[disabled] {
+        background-color: #003bb3;
+    }
+    af|commandLink.btn-success,
+    af|commandButton.btn-success,
+    af|goButton.btn-success,
+    .btn-success {
+        background-color: #377A37;
+    }
+    af|commandButton.btn-success:hover,
+    af|commandLink.btn-success:hover,
+    af|goButton.btn-success:hover,
+    .btn-success:hover,
+    af|commandButton.btn-success:active,
+    af|commandLink.btn-success:active,
+    af|goButton.btn-success:active,
+    .btn-success:active,
+    af|commandButton.btn-success.active,
+    af|commandLink.btn-success.active,
+    af|goButton.btn-success.active,
+    .btn-success.active,
+    af|commandButton.btn-success.disabled,
+    af|commandLink.btn-success.disabled,
+    af|goButton.btn-success.disabled,
+    .btn-success.disabled,
+    af|commandButton.btn-success[disabled]
+    af|commandLink.btn-success[disabled],
+    af|goButton.btn-success[disabled],
+    .btn-success[disabled] {
+        background-color: #003bb3;
+    }
+}
+@agent ie and (version:9) {
+    af|commandButton:active,
+    af|commandButton.btn:active,
+    af|commandLink.btn:active,
+    af|goButton.btn:active,
+    .btn:active,
+    af|commandButton.active,
+    af|commandButton.btn.active
+    af|commandLink.btn.active,
+    af|goButton.btn.active,
+    .btn.active {
+      background-color: #cccccc;
+    }
+    af|commandButton.btn-primary:active,
+    af|commandLink.btn-primary:active,
+    af|goButton.btn-primary:active.
+    .btn-primary:active.
+    af|commandButton.btn-primary.active,
+    af|commandLink.btn-primary.active,
+    af|goButton.btn-primary.active,
+    .btn-primary.active,
+    .login-form input[type="submit"].btn-primary:active,
+    .login-form input[type="submit"].btn-primary.active {
+      background-color: #003399;
+    }
+    af|commandButton.btn-success:active,
+    af|commandLink.btn-success:active,
+    af|goButton.btn-success:active,
+    .btn-success:active,
+    af|commandButton.btn-success.active,
+    af|commandLink.btn-success.active,
+    af|goButton.btn-success.active,
+    .btn-success.active {
+      background-color: #408140;
+    }
+}
+af|commandButton.btn-link,
+af|commandLink.btn-link,
+af|goButton.btn-link,
+.btn-link,
+af|commandButton.btn-link:active,
+af|commandLink.btn-link:active,
+af|goButton.btn-link:active,
+.btn-link:active,
+af|commandButton.btn-link[disabled],
+af|commandLink.btn-link[disabled]
+af|goButton.btn-link[disabled],
+.btn-link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+af|commandButton.btn-link,
+af|commandLink.btn-link,
+af|goButton.btn-link,
+.btn-link {
+  border-color: transparent;
+  cursor: pointer;
+  -tr-rule-ref: selector(".text-color-link");
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+af|comamndButton.btn-link:hover,
+af|commandLink.btn-link:hover,
+af|goButton.btn-link:hover,
+.btn-link:hover {
+  color: #18aaf3;
+  text-decoration: underline;
+  background-color: transparent;
+}
+af|commandButton.btn-link[disabled]:hover,
+af|commandLink.btn-link[disabled]:hover,
+af|goButton.btn-link[disabled]:hover,
+.btn-link[disabled]:hover {
+  color: #333333;
+  text-decoration: none;
+}
+/* End Buttons and Links */
+
+/* Begin Containers */
+af|panelGroupLayout {
+    display: block;
+    white-space: normal;
+}
+af|panelGroupLayout.plaintext div {
+    margin-bottom: 10px;
+}
+af|panelGroupLayout td {
+    vertical-align: top;
+}
+.af_panelFormLayout_content-cell {
+    text-align: inherit;
+}
+af|panelFormLayout .af_panelFormLayout_column td {
+    padding-bottom: 10px;
+}
+af|panelFormLayout .af_panelFormLayout_column td td,
+af|panelFormLayout.form-reset .af_panelFormLayout_column td {
+    padding-bottom: 0;
+}
+af|panelFormLayout .af_panelFormLayout_label-stacked-cell, af|panelFormLayout .AFPanelFormLayoutContentCell, af|panelFormLayout .af_panelFormLayout_content-cell {
+    padding-left: 0;
+}
+af|panelGroupLayout.wrapper-main {
+    min-width: 940px;
+}
+.page-container-bg {
+    background-color: #F7F4F1;
+}
+.page-container {
+    -tr-rule-ref: selector(".page-container-bg");
+    box-shadow: 0 0 4px #747474;
+    padding: 20px;
+    border: 0;
+}
+.application-container af|panelGroupLayout {
+    margin-left: 0;
+    margin-right: 0;
+}
+af|panelGroupLayout.page-intro {
+    box-shadow: 0 0 4px #747474;
+    background: #f7f4f1;
+    position: relative;
+    padding-top: 47px;
+    margin-top: 3px;
+}
+@agent ie and (version<=8) {
+    af|panelGroupLayout.page-intro {
+        border: 1px solid #e0e0e0;
+    }
+}
+af|panelGroupLayout.content-flush {
+    width: 760px;
+    float: left;
+    min-height: 1px;
+}
+af|panelGroupLayout.content-flush af|panelGroupLayout.content-wrap
+{
+    padding: 20px;
+}
+/* End Containers */
+
+/* Begin Lists */
+af|panelList::link {
+    -tr-inhibit: font-size;
+    -tr-rule-ref: selector(".text-color-link");
+}
+af|panelList ul {
+    padding-left: 25px;
+}
+/* End Lists */
+
+/* Begin Form Inputs */
+af|inputText,
+af|inputDate {
+  height: 30px;
+}
+af|inputDate::content,
+af|inputText::content,
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  -moz-transition: border linear .2s, box-shadow linear .2s;
+  -o-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
+}
+af|inputDate::content,
+af|inputText::content,
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  height: 20px;
+  padding: 4px 6px;
+  font-size: 14px;
+  color: #555;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+af|inputDate::content:focus,
+af|inputText::content:focus,
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted 9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
+}
+af|inputText.p_AFFatal af|inputText::content,
+af|inputText.p_AFError af|inputText::content {
+    border: 1px solid #C70000 !important;
+}
+af|inputText.strong::label {
+    font-weight:bold;
+    font-size:14px;
+}
+af|panelFormLayout.facilityName {
+  margin-left: -17px;
+}
+.af_inputText_content, .WCInputText{width:260px;} /*default width if class not mentioned for input*/
+af|selectOneRadio::content {
+  font-size: 0.857em;
+}
+af|selectOneRadio.p_AFError::content {
+  color: #a23f3d;
+}
+.af_selectBooleanCheckbox.p_AFError .af_selectBooleanCheckbox_content-input, .af_selectBooleanRadio.p_AFError .af_selectBooleanRadio_content-input, .af_selectManyCheckbox.p_AFError .af_selectManyCheckbox_content-input, .af_selectOneRadio.p_AFError .af_selectOneRadio_content-input, .af_selectBooleanCheckbox.p_AFFatal .af_selectBooleanCheckbox_content-input, .af_selectBooleanRadio.p_AFFatal .af_selectBooleanRadio_content-input, .af_selectManyCheckbox.p_AFFatal .af_selectManyCheckbox_content-input, .af_selectOneRadio.p_AFFatal .af_selectOneRadio_content-input {
+  background: transparent;
+}
+af|selectOneRadio::label {
+  font-size: 0.857em;
+}
+af|selectOneRadio.heading::item-text {
+  display: block;
+  font-size: 0.957em;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: -16px;    
+}
+@agent gecko {
+  af|selectOneRadio.heading::item-text {
+    display: block;
+    font-size: 0.957em;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: -22px;    
+  }       
+}
+@agent ie and (version=8) {
+  af|selectOneRadio.heading::item-text {
+    display: block;
+    font-size: 0.957em;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: -22px;    
+  }       
+}
+af|selectBooleanCheckbox::item-text {
+    display: block;
+    margin-left: 22px;
+    margin-top: -17px;
+    white-space: normal; 
+    margin-bottom: 10px;
+    font-size: 1em; /*For JIRA HIXIR-360 */
+}
+@agent gecko {
+  af|selectBooleanCheckbox::item-text, af|selectManyCheckbox::item-text {
+    display: block;
+    margin-left: 22px;
+    margin-top: -21px;
+    white-space: normal; 
+    margin-bottom: 10px;
+    font-size: 1em; /*For JIRA HIXIR-360 - Mozilla Firefox */
+  }
+}
+@agent ie and (version:7) and (version:8) and (version:9) {
+  af|selectBooleanCheckbox::item-text, af|selectManyCheckbox::item-text {
+    display: block;
+    margin-left: 22px;
+    margin-top: -19px;
+    white-space: normal; 
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+}
+.AFRequiredIconStyle
+{
+    display: none;
+    visibility: hidden;
+}
+af|selectOneChoice
+{
+    margin-bottom: 5px;
+}
+af|selectOneChoice::label
+{
+    font-size: 0.857em;
+}
+af|panelFormLayout::content-cell {
+    -tr-inhibit: padding-left;    
+}
+.AFPanelFormLayoutContentCell
+{
+    padding-right: 20px;
+}
+.input-prepend .af_inputText_content{
+position: relative;
+margin-bottom: 0;
+vertical-align: top;
+-webkit-border-radius: 0 4px 4px 0;
+-moz-border-radius: 0 4px 4px 0;
+border-radius: 0 4px 4px 0;
+}
+
+af|panelGroupLayout.input-prepend
+{
+    margin-top: 3px;
+}
+
+af|panelGroupLayout.input-prepend af|inputText::content
+{
+    margin-bottom: 9px;
+}
+
+af|panelGroupLayout.input-prepend.last-child
+{
+    margin-bottom: 0px;
+}
+.value_type af|inputText::content{
+    margin-left: -31px;
+    margin-top: 3px;    
+}
+
+.input-prepend af|inputText::content
+{
+    border-radius:0px 4px 4px 0px;
+}
+
+/* End Form Inputs */
+
+/* Begin Login Form */
+.login-form label {
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 246px;
+    margin-bottom: 10px;
+}
+.login-form {
+    margin-bottom: 10px;
+}
+af|inputText::content,
+af|selectOneChoice::content,
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    -tr-rule-ref: selector(".user-entry-font");
+}
+/* End Login Form */
+
+/* Begin Navigation */
+af|panelGroupLayout.nav-main {
+    color: #B2B6BF;
+}
+.nav-main af|commandImageLink,
+.nav-main af|commandImageLink::text {
+    display: block;
+}
+.nav-main af|panelGroupLayout {
+    min-width: 940px;
+}
+af|panelGroupLayout.nav-main li {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("/IndividualPortal/images/nav-inactive-background.png");
+    background-origin: padding-box;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+af|panelGroupLayout.nav-main li af|commandImageLink::image {
+    display: block;
+    margin: 4px auto;
+}
+@agent ie and (version: 7) {
+    af|panelGroupLayout.nav-main li {
+        width: 235px;
+    }
+}
+af|panelGroupLayout.nav-main li af|commandImageLink.brand {
+    margin: 0;
+    padding: 12px 10px 8px;
+}
+af|panelGroupLayout.nav-main li af|commandImageLink.brand af|commandLink::image {
+    margin: 0;
+}
+af|panelGroupLayout.nav-main li af|commandImageLink {
+    background: url('/images/nav-inactive-background.png') left top no-repeat;
+    text-decoration: none;
+}
+af|panelGroupLayout.nav-main li af|commandImageLink.active {
+    background: url('/images/application-background.jpg') left top repeat #F7F4F1;
+    color: #313F60;
+    margin-top: -4px;
+    padding-top: 12px;
+    -webkit-box-shadow: 0 -2px 1px #262626;
+       -moz-box-shadow: 0 -2px 1px #262626;
+            box-shadow: 0 -2px 1px #262626;
+}
+af|panelGroupLayout.nav-main li af|commandImageLink.active::text {
+    color: #313F60;
+    margin: 0;
+}
+af|panelGroupLayout.nav-main li af|commandImageLink.brand {
+    background:transparent;
+    color: #ffffff;
+}
+
+af|panelGroupLayout.nav-main li af|commandImageLink {
+    padding: 8px 45px;
+    color: #B2B6BF;
+}
+af|panelGroupLayout.nav-main af|commandImageLink::text {
+    color: #B2B6BF;
+    text-decoration: none;
+}
+/* End Navigation */
+
+/* Begin Left Sidebar */
+af|panelGroupLayout.sidebar-main af|commandImageLink:hover,
+af|panelGroupLayout.sidebar-main af|commandImageLink:focus,
+af|panelGroupLayout.sidebar-main af|commandImageLink:active {
+    background: none;
+    text-decoration: none;
+}
+af|panelGroupLayout.sidebar-main af|commandImageLink::text {
+    margin-left:0px;
+    color: #3A579D;
+    text-decoration: none;
+}
+af|panelGroupLayout.sidebar-main {
+    width: 180px;
+}
+af|panelGroupLayout.sidebar-main af|panelList,
+af|panelGroupLayout.sidebar-main af|panelList af|commandImageLink {
+    display: block;
+}
+af|panelGroupLayout.sidebar-main af|panelList.nav-secondary {
+    margin-top: 2px; /* Line sidebar up with content area (due to shadow around content area) */
+}
+af|panelGroupLayout.sidebar-main .nav-secondary ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li {
+    background: url('/images/sidebar-nav-border.png') left top repeat-x;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li af|commandImageLink {
+    padding: 15px 20px;
+    font-family: Verdana, Arial;
+    font-size: 14px;
+    font-weight: normal;
+    color: #004460;
+    text-transform: none;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .active,
+af|panelGroupLayout.sidebar-main .nav-secondary li .expanded {
+    background: #F7F4F1;
+    box-shadow: 0 2px 2px 0 #b2b2b2;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .expanded .active,
+af|panelGroupLayout.sidebar-main .nav-secondary li li .active {
+    box-shadow: 0 0 0 0 #000000;
+}
+af|panelGroupLayout.sidebar-main .nav-tertiary li {
+    background: url("/images/sidebar-nav-border.png") left top repeat-x;
+}
+af|panelGroupLayout.sidebar-main .nav-tertiary li .active {
+    background: transparent;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .unavailable af|commandImageLink::text,
+af|panelGroupLayout.sidebar-main .nav-secondary li .disabled af|commandImageLink::text,
+af|panelGroupLayout.sidebar-main .nav-secondary li .p_AFDisabled af|commandImageLink::text {
+    color: #6d6e71;
+    cursor: default;
+    text-decoration: none;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .unavailable af|commandImageLink::text:hover,
+af|panelGroupLayout.sidebar-main .nav-secondary li .disabled af|commandImageLink::text:hover {
+    background: none;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .active af|commandImageLink::text {
+    color: #71004d;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .active af|commandImageLink::image {
+    float: left;
+    margin-left: -17px;
+    margin-top: 0.23em;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .active .top {
+    display: block;
+    height: 3px;
+    background: url('/images/nav-secondary-active-top.png') left top repeat-x;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .active .bottom {
+    display: block;
+    height: 2px;
+    background: url('images/nav-secondary-active-bottom.png') left top repeat-x;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .current a {
+    color: #314a83;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .current li .active af|commandImageLink::text {
+    color: #71004d;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .current li .active af|commandImageLink::image,
+af|panelGroupLayout.sidebar-main .nav-secondary li .current li .complete af|commandImageLink::image {
+    padding-right: 4px;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li span.disabled {
+    display: block;
+    color: #999999;
+  font-family: Verdana,Arial,sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 15px 20px;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .current {
+    background: url('/images/nav-secondary-active.png') left top repeat;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .current .top {
+    display: block;
+    height: 2px;
+    background: url('/images/nav-secondary-active-top.png') left top repeat-x;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary li .current .bottom {
+    display: block;
+    height: 2px;
+    background: url('/images/nav-secondary-active-bottom.png') left top repeat-x;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary .nav-tertiary ul {
+    margin-left: 20px;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary .nav-tertiary ul li af|panelGroupLayout {
+    padding-left: 17px;
+}
+af|panelGroupLayout.sidebar-main .nav-secondary .nav-tertiary ul li af|panelGroupLayout.active {
+    background: url('/images/nav-tertiary-active-arrow.png') left 50% no-repeat;
+}
+af|panelGroupLayout.sidebar-main .nav-numbered .nav-tertiary ul {
+    margin-left: 45px;
+}
+af|panelGroupLayout.sidebar-main .nav-numbered li a .nav-text {
+    display: block;
+    margin-left: 20px;
+}
+af|panelGroupLayout.sidebar-main .nav-tertiary ul li af|commandImageLink {
+    padding: 10px 10px 10px 0;
+    font-size: 14px;
+}
+af|panelGroupLayout.sidebar-main .nav-tertiary ul {
+    display: none;
+    visibility: hidden;
+    margin: 0;
+}
+af|panelGroupLayout.sidebar-main .expanded .nav-tertiary ul {
+    background: none;
+    display: block;
+    visibility: visible;
+}
+/* End Left Sidebar */
+
+/* Begin Page Header */
+af|panelGroupLayout.page-header {
+    padding-bottom: 9px;
+    border-bottom: 1px solid #d6d6d6;
+    margin: 0 0 15px;
+}
+af|panelGroupLayout.page-header af|panelGroupLayout.inline-buttons af|commandButton + af|commandButton,
+af|panelGroupLayout.action-buttons .pull-right + .pull-right {
+    margin-left: 10px;
+}
+af|panelGroupLayout.page-footer {
+    display: block;
+    border-top: 1px solid #d6d6d6;
+    margin-top: 20px;
+    padding-top: 21px
+}
+/* End Page Header */
+
+/* Begin Help Tray */
+af|panelGroupLayout.help-tray {
+    position: relative;
+    float: right;
+    margin-top: -88px;
+    padding-top: 12px;
+    font-size: 1.4em;
+    width: 102px;
+    background: url('/images/help-tray-top.png') left top no-repeat;
+    overflow: hidden;
+    z-index: 250;
+    margin-left: -940px;
+}
+af|panelGroupLayout.help-tray-open {
+    width: 325px;
+    background: url('/images/help-tray-open-top.png') left top no-repeat;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.wrap {
+    padding: 0 0 12px 6px;
+    background: url('/images/help-tray-bottom.png') right bottom no-repeat;
+}
+af|panelGroupLayout.help-tray-open af|panelGroupLayout.wrap {
+    background: url('/images/help-tray-open-bottom.png') left bottom no-repeat;
+    padding-bottom: 0;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner {
+    background: url('/images/help-tray.png') right 45px no-repeat;
+    height: 575px;
+}
+af|panelGroupLayout.help-tray-open af|panelGroupLayout.help-tray-inner {
+    background: transparent;
+    padding-bottom: 12px;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner-wrap {
+    visibility: hidden;
+    display: none;
+}
+af|panelGroupLayout.help-tray-open af|panelGroupLayout.help-tray-inner-wrap {
+    visibility: visible;
+    display: block;
+    height: 575px;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.handle {
+    background: url('/images/help-tray-handle-arrow-closed.png') 8px 22px no-repeat;
+}
+af|panelGroupLayout.help-tray-open af|panelGroupLayout.handle {
+    background: url('/images/help-tray-handle-arrow-open.png') 8px 22px no-repeat;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.handle af|commandImageLink::image {
+    margin: 0 0 0 8px;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.handle af|commandImageLink::text {
+    display: block;
+    -tr-rule-ref: selector(".accent-font");
+    -tr-rule-ref: selector(".text-color-default");
+    text-decoration: none;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.handle af|commandImageLink,
+af|panelGroupLayout.help-tray af|panelGroupLayout.handle af|commandImageLink:hover {
+    padding: 5px 0 5px 15px;
+    display: block;
+}
+af|panelGroupLayout.help-tray a {
+    outline: none;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item {
+    background: url('/images/help-tray-link-border.png') left top repeat-x;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|commandImageLink.active,
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|goImageLink.active {
+    background: url('/images/help-tray-active.png') left top repeat-x;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|commandImageLink,
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|goImageLink {
+    padding-bottom: 15px;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|commandImageLink,
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|goImageLink {
+    padding: 17px 20px 15px;
+    display: block;
+    height: 43px;
+    margin: 1px 0;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|commandImageLink::text,
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|commandImageLink::text:hover,
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|goImageLink::text,
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|goImageLink::text:hover{
+    text-decoration: none;
+    -tr-rule-ref: selector(".text-color-default");
+    font-weight: bold;
+    line-height: 43px;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|goImageLink {
+    padding: 0;
+    height: auto;
+    white-space: normal;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|goImageLink::text {
+  line-height: 1.2;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content {
+    font-size: 12px;
+    background: #f4eece;
+    overflow-y: scroll;
+    height: 350px;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-inner-wrap af|panelGroupLayout.help-tray-item-support af|panelGroupLayout.help-tray-content {
+    height: auto;
+    overflow-y: hidden;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content span,
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|goLink {
+    font-size: 12px;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content .row {
+    padding: 10px;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content-banded .band {
+    background: #FBF9EE;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|commandImageLink.question,
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|goImageLink.read-more{
+    padding: 0;
+    margin: 0 0 5px;
+    height: auto;
+    line-height: 1em;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|commandImageLink.question::image {
+    float: right;
+    vertical-align: middle;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|commandImageLink.question::text,
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|goImageLink.read-more::text {
+    line-height: 1em;
+    margin: 0;
+    font-size: 13.5px;
+    padding-right: 10px;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|goImageLink.read-more::text {
+    margin-left: 5px;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|goImageLink.read-more::text {
+    -tr-rule-ref: selector(".text-color-link");
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|goImageLink.read-more::text {
+    -tr-rule-ref: selector(".AFLinkForeground:alias");
+    font-weight: normal;
+}
+af|panelGroupLayout.help-tray af|panelGroupLayout.help-tray-inner af|panelGroupLayout.help-tray-item af|panelGroupLayout.help-tray-content af|panelGroupLayout.answer {
+    line-height: 1.35;
+}
+/* End Help Tray */
+
+/* Begin Modals and Popups */
+af|panelWindow.modal {
+    position: relative;
+    top: 10%;
+    left: 50%;
+    z-index: 1050;
+    width: 610px;
+    margin-left: -305px;
+    background: #ffffff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding-box;
+            background-clip: padding-box;
+    outline: none;
+}
+af|panelGroupLayout.modal-header {
+    padding: 0 15px;
+    padding-bottom:13px;
+    border-bottom: 1px solid #eee;
+}
+af|panelFormLayout.modal-body,
+af|panelGroupLayout.modal-body {
+    position: relative;
+    overflow-y: auto;
+    max-height: 400px;
+    padding: 15px;
+}
+af|panelWindow.modal-no-title af|panelFormLayout.modal-body,
+af|panelWindow.modal-no-title af|panelGroupLayout.modal-body {
+    padding: 0 15px 15px;
+}
+af|panelGroupLayout.modal-map-area {
+    border: 1px solid #A5A5A5;
+    background: #F2F2F2;
+    padding: 9em 0;
+    text-align: center;
+    font-weight: bold;
+    color: #909090;
+}
+.modal-body af|panelFormLayout .AFPanelFormLayoutContentCell {
+    padding-right: 7px!important;
+}
+.AFModalGlassPane {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+af|panelWindow.modal-large {
+    width: 940px;
+    margin-left: -470px;
+}
+af|panelWindow.modal-full {
+    top: 20px;
+    height: auto;
+}
+af|panelWindow.modal-no-title af|panelGroupLayout.modal-body {
+    max-height: 605px;
+}
+@agent ie {
+    af|panelWindow.modal-no-title af|panelGroupLayout.modal-body {
+        max-height: 585px;
+    }
+}
+@agent gecko {
+    af|panelWindow.modal-no-title af|panelGroupLayout.modal-body {
+        max-height: 585px;
+    }
+}
+af|panelFormLayout.modal-body af|panelGroupLayout .span9.af_panelGroupLayout {
+    margin-left:0px;
+}
+af|panelWindow.modal-medium {
+    width:720px;
+    left:44%;
+}
+af|panelGroupLayout.modal-footer.action-buttons {
+    padding:14px 15px 15px;
+}
+af|panelGroupLayout.modal_scroller {
+    height:300px;
+    overflow:auto;
+}
+af|panelFormLayout.modal-body-tuner {
+    position: relative;
+    overflow-y: auto;
+    max-height: 400px;
+    padding:0 15px;
+}
+af|panelFormLayout.threecolumn_modal {
+    margin-top:-14px;
+}
+af|panelGroupLayout.modal-footer {
+    padding: 14px 15px 15px;
+    margin-bottom: 0;
+    text-align: right;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: inset 0 1px 0 #ffffff;
+    -moz-box-shadow: inset 0 1px 0 #ffffff;
+    box-shadow: inset 0 1px 0 #ffffff;
+}
+af|panelGroupLayout.modal-footer af|panelGroupLayout.action-buttons {
+    text-align: left;
+}
+af|panelWindow::close-icon-style {
+    background: url("../images/icons/icon-modal-close.png") no-repeat scroll 0 0 transparent;
+    cursor: default;
+    height: 16px;
+    margin-left: -11px;
+    margin-top: 25px;
+    position: absolute;
+    width: 16px;
+    z-index: 1;
+}
+af|panelWindow.modal-no-title af|panelWindow::close-icon-style {
+    right: 15px;
+    top: 15px;
+    margin: 0;
+}
+af|panelWindow::close-icon-style:hover {
+    cursor: pointer;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+af|panelWindow::content-start, 
+af|panelWindow::content-end, 
+af|panelWindow::header-start, 
+af|panelWindow::header-end,
+af|panelWindow::footer,
+af|panelWindow::footer-start,
+af|panelWindow::footer-end {
+    display: none!important;
+}
+af|panelGroupLayout.modal-body af|selectBooleanRadio::label {
+    display: none;
+}
+/* End Modals and Popups */
+
+/* Begin Focus Styles */
+a:focus {
+  outline: thin dotted #333333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+}
+select:focus,
+af|commandButton:focus,
+af|commandLink:focus,
+af|goButton:focus,
+af|goLink:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted rgba(82, 168, 236, 0.9);
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 5px auto -webkit-focus-ring-color;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);  
+}
+/* End Focus Styles */
+
+/* Begin Miscellaneous */
+.icon {
+    height: 16px;
+    width: 16px;
+}
+.has-tooltip {
+    cursor: help;
+}
+af|image.has-tooltip  {
+    cursor: help;
+    height: 18px;
+    vertical-align: -15%;
+    width: 18px;
+}
+af|separator {
+    border-top: 1px solid #d6d6d6;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    height: 0px;
+}
+.rightAlignText {
+    text-align: right;
+}
+.checkbox-indent {
+    display: block;
+    margin-left: 22px;
+}
+.OraNavBarActiveLink {
+    white-space:nowrap !important;
+}
+.af_menu_scroll-content {
+    background:white !important;
+}
+.AFDynamicHelpIconStyle:alias {
+    padding-right:16px;
+    margin-left:1px;
+    background-repeat:no-repeat;
+    font-size:11px;
+    margin-right:4px;
+    background-image:url('/images/icons/icon-info-16.png');
+    vertical-align:baseline;
+    cursor: help;
+}
+.AFPanelFormLayoutContentCell,
+af|panelFormLayout::label-stacked-cell {
+    tr-inhibit: padding;
+    padding: 0px;
+}
+af|panelFormLayout::label-cell,
+af|panelFormLayout::label-stacked-cell label {
+    display: inline;
+}
+.AFLabel:alias,
+.af_selectOneRadio_item-text,
+af|selectManyCheckbox::item-text {
+    display: inline;
+}
+af|panelGroupLayout.control-group {
+    margin-bottom: 10px;
+}
+af|selectOneRadio::content af|selectOneRadio::content-input,
+af|selectBooleanRadio::content af|selectBooleanRadio::content-input,
+af|selectManyCheckbox::content af|selectManyCheckbox::content-input {
+    padding: 0 2px 0 0;
+    -tr-inhibit: vertical-align;
+}
+af|selectOneRadio af|selectOneRadio::item-text,
+af|selectBooleanRadio af|selectBooleanRadio::item-text,
+af|selectManyCheckbox af|selectManyCheckbox::item-text {
+    vertical-align: 15%;
+    margin-right: 20px;
+}
+af|selectBooleanCheckbox af|selectBooleanCheckbox::content-input,
+af|selectManyCheckbox af|selectManyCheckbox::content-input,
+af|selectOneRadio af|selectOneRadio::content-input {
+    vertical-align: 5%;
+}
+af|selectOneRadio .af_selectOneRadio_native-input,
+af|selectBooleanCheckbox .af_selectBooleanCheckbox_native-input,
+af|selectManyCheckbox .af_selectManyCheckbox_native-input {
+    margin: 0;
+    padding: 0;
+}
+af|selectBooleanCheckbox.inline-controls {
+    padding-top: 8px;
+    display: block;
+}
+af|selectManyCheckbox af|selectManyCheckbox::item-text {
+    font-size: 0.857em;
+}
+/* End Miscellaneous */
+
+/* Begin Print Style */
+@agent email { /* Used when the querystring contains org.apache.myfaces.trinidad.agent.email=true */
+    af|document, af|document.non-portal, af|panelGroupLayout.page-intro {
+        background: #ffffff;
+    }
+    af|panelGroupLayout.header-main, af|panelGroupLayout.nav-main, af|panelGroupLayout.footer-main {
+        display: none;
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    af|document, h1, h2, h3, h4, h5, h6 {
+        color: #000000;
+    }
+    af|panelGroupLayout.page-intro {
+        box-shadow: 0 0 0 #000000;
+    }
+}
+/* End Print Style */
+
+
+
+
+
+
+
+af|commandButton af|commandButton::icon-style {
+    -tr-rule-ref: selector(".icon");
+    padding: 0;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+af|selectOneChoice {    
+    height: 30px;
+}
+
+af|selectOneChoice::content {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC!important;
+    border-radius: 4px 4px 4px 4px;
+    color: #555555;
+    padding: 4px 6px;
+    -tr-inhibit:font-size;
+}
+
+
+/* Blue alert box */
+.alert-box af|decorativeBox {
+    background-color: #D9EDF7;
+    box-shadow: none;
+}
+
+.alert-box af|decorativeBox::center {
+    background: none repeat scroll 0 0 #D9EDF7;
+    padding: 10px;
+    color: #2A617D;
+    border: #BCE8F1 solid 1px;
+    border-radius: 4px 4px 4px 4px;
+    /*margin-bottom: 20px;*/
+    text-shadow: 0 1px 0rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+.icon-close {
+    margin-right: -8px;
+    margin-top: -8px;
+    z-index: 25;
+}
+
+
+af|panelSplitter {
+-tr-divider-size: 0;
+/*-tr-divider-size: 32;*/
+}
+
+af|panelSplitter::vertical-divider {
+    height: 100px;
+    /*background: url("/images/compare-tray-panel-splitter.png");*/
+    background-repeat: no-repeat;
+   background-color: #d8d5d3;
+   
+}
+af|panelSplitter::vertical-icon-style {
+    float: left;
+    /*background-image: url("/images/icons/icon-hide-compare.png");*/
+    background-image: url("/images/compare-tray-panel-splitter.png");
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 200px;
+    cursor: pointer;   
+    visibility: visible;
+}
+af|panelSplitter::vertical-icon-style img
+{
+  /*display: none;*/
+  /*
+  width: 129px;
+  height: 30px;
+  */
+}
+
+af|panelSplitter::horizontal-highlighter,
+af|panelSplitter::vertical-highlighter {
+    visibility: hidden;
+}
+af|panelSplitter::vertical-collapse-icon {
+    /*background-image: url("/images/icons/icon-hide-compare.png");*/
+    visibility: hidden;
+}
+af|panelSplitter::vertical-icon-container {
+    visibility: hidden;
+}
+
+af|panelAccordion {
+     -tr-header-height: 34;
+     /*-tr-overflow-height: 50;*
+    af|panelAccordion::header-disclose,/
+    /*border-top: 1px solid #AAAAAA;
+    af|panelAccordion::icon-style,*/
+    background: white;
+}
+af|separator {
+    height: 1px;
+    color: #D6D6D6;
+}
+.plan-compare af|panelAccordion::header,
+.plan-compare af|panelAccordion::header-subsequent {
+    border-right: 1px solid #AAAAAA;
+    border-left: 1px solid #AAAAAA;
+    cursor: pointer; 
+    height: 30px !important;
+}
+.plan-compare af|panelAccordion::header {
+    border-top: 1px solid #AAAAAA;
+}
+.plan-compare af|panelAccordion::header-title {
+    /*background: linear-gradient (to bottom, #F6F3F0 0%, #ECECEB 100%) repeat scroll 0 0 transparent;*/
+    -tr-rule-ref: selector(".AFDefaultFontFamily:alias");
+    -tr-rule-ref: selector(".AFDefaultFont:alias");
+    cursor: pointer; 
+    
+    color: #333333;
+    font-size: 0.85em;
+    /*line-height: 34px;*/
+    
+    /* For Placing Header Text Vertically In The Center - By UX*/
+    line-height: 2.6em;
+    
+}
+.plan-compare af|panelAccordion::header-start,
+.plan-compare af|panelAccordion::header-toolbar,
+.plan-compare af|panelAccordion::header-end {
+    width: 0;
+    display: none;
+    visibility: hidden;
+}
+.plan-compare af|panelAccordion::header-title,
+.plan-compare af|panelAccordion::header-disclose {
+    cursor: pointer; 
+    background: #efefef;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod?EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #f6f3f0 0%, #ECECEB 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f3f0), color-stop(100%,#ECECEB));
+    background: -webkit-linear-gradient(top, #f6f3f0 0%,#ECECEB 100%);
+    background: -o-linear-gradient(top, #f6f3f0 0%,#ECECEB 100%);
+    background: -ms-linear-gradient(top, #f6f3f0 0%,#ECECEB 100%);
+    background: linear-gradient(to bottom, #f6f3f0 0%,#ECECEB 100%);
+    /*filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f3f0', endColorstr='#ECECEB',GradientType=0 )*/
+}
+.plan-compare af|panelAccordion::header-disclose {
+    width: 20px;
+}
+.plan-compare af|panelAccordion::undisclosed-icon-style {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer; 
+    background-image: url(/images/icons/icon-chevron-down-16.png);
+    /* For Drop Down Image Alignment - ADDED BY UX*/
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.plan-compare af|panelAccordion::disclosed-icon-style {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer; 
+    background-image: url(/images/icons/icon-chevron-up-16.png);
+    /* For Drop Down Image Alignment - ADDED BY UX*/
+    margin-top: 5px;
+    margin-left: 5px;
+}
+/*
+.table-compare-plans {
+	padding: 6px;
+	border-left: none;
+        border-right: none;
+        border-color: #aaa;
+	border-collapse:collapse;
+        font-size: 0.85em;
+        color: #333333;
+}
+*/
+.table-compare-plans {
+	border:  medium Blue  ;
+        border-collapse:collapse;
+        font-size: 0.85em;
+        color: #333333;
+}
+.table-compare-plans th {
+	padding: 6px;
+	border-top: 1px solid #aaa;
+	border-bottom: none;
+        text-align: left;
+}
+.table-compare-plans td {
+	width: 178px;
+	padding: 6px 6px 6px 7px;
+	border-top: 1px solid #aaa;
+	border-bottom: none;
+	border-left: 1px solid #aaa;
+        text-align: left;
+        word-break: break-word;
+}
+.table-compare-plans tbody th {
+    background-color: #EBEBEB;
+    font-size: 1em;
+}
+
+.local-physicians  {
+    margin: 0;
+    background: url("/images/compare-plans-local-physicians.png") no-repeat scroll right top transparent;
+}
+.local-physicians-count {
+   color: #5A9BBB;
+   display: block;
+   font-size: 1.35em;
+   font-weight: bold;
+   padding: 6px;
+}
+.local-physicians-count-border {
+    -tr-rule-ref: selector(".local-physicians-count");
+    border-top: 1px solid #DDDDDD;
+}
+
+.local-physicians-text {
+    color: #5B5B5B;padding: 6px;
+}
+
+.title-bar {
+    background: url("/images/breadcrumb-background-connector.png") repeat-x scroll left top transparent;
+    height: 27px;
+    color: #232735;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 0.95em;
+}
+
+.aptc-font {
+    -tr-rule-ref: selector(".AFDefaultFontFamily:alias");
+    -tr-rule-ref: selector(".AFDefaultFont:alias");
+    -tr-rule-ref: selector(".AFDefaultBoldFont:alias");
+    color: #000000;
+}
+
+.aptc-slider af|inputNumberSlider::bar {
+    background-color: Lime;
+    height: 18px;
+    background-image:none;
+    
+}
+af|inputNumberSlider::bar-outer-border {
+    margin: 10px;
+}
+.aptc-slider af|inputNumberSlider::ticks {
+    /*margin-top: -40px;
+    
+     -tr-rule-ref: selector(".aptc-font");*/
+}
+.aptc-slider af|inputNumberSlider::tick-value {
+    -tr-rule-ref: selector(".aptc-font");
+}
+.aptc-slider af|inputNumberSlider::thumb-value {
+    display: none;
+}
+.aptc-slider af|inputNumberSlider::content {
+    border: 2px solid #aaa;
+    background-color: #ffffff;
+    padding: 10px;
+    padding-right: 50px;
+    width: 322px;
+}
+.aptc-slider af|inputNumberSlider::minus-icon-style, .aptc-slider  af|inputNumberSlider::plus-icon-style {
+    display: none;
+}
+.aptc-slider af|inputNumberSlider::thumb-value {
+    -tr-rule-ref: selector(".AFDefaultFontFamily:alias");
+    -tr-rule-ref: selector(".AFDefaultFont:alias");
+    -tr-rule-ref: selector(".AFTextForeground:alias");
+}
+.aptc-slider af|inputNumberSlider {
+    
+}
+
+.test-slider af|inputNumberSlider::range {
+    -tr-rule-ref: selector(".Bronze-bg");
+}
+.test-slider af|inputNumberSlider::minus-icon-style, .test-slider  af|inputNumberSlider::plus-icon-style {
+    display: none;
+}
+.test-slider af|inputNumberSlider::bar {
+    background-color: Lime;
+    height: 18px;
+    background-image:none;
+    
+}
+.test-slider af|inputNumberSlider::content {
+    width: 322px;
+}
+.test-slider af|inputNumberSlider::tick-value {
+    -tr-rule-ref: selector(".aptc-font");
+}
+.test-slider af|inputNumberSlider::thumb-value {
+    display: none;
+}
+
+
+
+
+.heading af|panelHeader::title-text0 {
+    font-size: 1.14285em;
+    line-height: 1.25;
+    -tr-rule-ref: selector(".AFDefaultFontFamily:alias");
+    -tr-rule-ref: selector(".AFDefaultFont:alias");
+    -tr-rule-ref: selector(".AFDefaultBoldFont:alias");
+    -tr-rule-ref: selector(".AFTextForeground:alias");
+}
+
+.field-label af|panelHeader::title-text0 {
+    -tr-rule-ref: selector(".AFDefaultFontFamily:alias");
+    -tr-rule-ref: selector(".AFDefaultFont:alias");
+    -tr-rule-ref: selector(".AFTextForeground:alias");
+}
+
+
+
+
+.newSpan24 af|inputDate::content,.newSpan24 af|inputText::content,.newSpan24 af|inputComboboxListOfValues::content,.newSpan24 af|selectOneChoice::content,.newSpan24 af|selectManyChoice::content{
+  width: 940px;
+}
+.newSpan23 af|inputDate::content,.newSpan23 af|inputText::content,.newSpan23 af|inputComboboxListOfValues::content,.newSpan23 af|selectOneChoice::content,.newSpan23 af|selectManyChoice::content{
+  width: 900px;
+}
+.newSpan22 af|inputDate::content,.newSpan22 af|inputText::content,.newSpan22 af|inputComboboxListOfValues::content,.newSpan22 af|selectOneChoice::content,.newSpan22 af|selectManyChoice::content{
+  width: 860px;
+}
+.newSpan21 af|inputDate::content,.newSpan21 af|inputText::content,.newSpan21 af|inputComboboxListOfValues::content,.newSpan21 af|selectOneChoice::content,.newSpan21 af|selectManyChoice::content{
+  width: 820px;
+}
+.newSpan20 af|inputDate::content,.newSpan20 af|inputText::content,.newSpan20 af|inputComboboxListOfValues::content,.newSpan20 af|selectOneChoice::content,.newSpan20 af|selectManyChoice::content{
+  width: 780px;
+}
+.newSpan19 af|inputDate::content,.newSpan19 af|inputText::content,.newSpan19 af|inputComboboxListOfValues::content,.newSpan19 af|selectOneChoice::content,.newSpan19 af|selectManyChoice::content{
+  width: 740px;
+}
+.newSpan18 af|inputDate::content,.newSpan18 af|inputText::content,.newSpan18 af|inputComboboxListOfValues::content,.newSpan18 af|selectOneChoice::content,.newSpan18 af|selectManyChoice::content{
+  width: 700px;
+}
+.newSpan17 af|inputDate::content,.newSpan17 af|inputText::content,.newSpan17 af|inputComboboxListOfValues::content,.newSpan17 af|selectOneChoice::content,.newSpan17 af|selectManyChoice::content{
+  width: 660px;
+}
+.newSpan16 af|inputDate::content,.newSpan16 af|inputText::content,.newSpan16 af|inputComboboxListOfValues::content,.newSpan16 af|selectOneChoice::content,.newSpan16 af|selectManyChoice::content{
+  width: 620px;
+}
+.newSpan15 af|inputDate::content,.newSpan15 af|inputText::content,.newSpan15 af|inputComboboxListOfValues::content,.newSpan15 af|selectOneChoice::content,.newSpan15 af|selectManyChoice::content{
+  width: 580px;
+}
+.newSpan14 af|inputDate::content,.newSpan14 af|inputText::content,.newSpan14 af|inputComboboxListOfValues::content,.newSpan14 af|selectOneChoice::content,.newSpan14 af|selectManyChoice::content{
+  width: 540px;
+}
+.newSpan13 af|inputDate::content,.newSpan13 af|inputText::content,.newSpan13 af|inputComboboxListOfValues::content,.newSpan13 af|selectOneChoice::content,.newSpan13 af|selectManyChoice::content{
+  width: 500px;
+}
+.newSpan12 af|inputDate::content,.newSpan12 af|inputText::content,.newSpan12 af|inputComboboxListOfValues::content,.newSpan12 af|selectOneChoice::content,.newSpan12 af|selectManyChoice::content{
+  width: 460px;
+}
+.newSpan11 af|inputDate::content,.newSpan11 af|inputText::content,.newSpan11 af|inputComboboxListOfValues::content,.newSpan11 af|selectOneChoice::content,.newSpan11 af|selectManyChoice::content{
+  width: 420px;
+}
+.newSpan10 af|inputDate::content,.newSpan10 af|inputText::content,.newSpan10 af|inputComboboxListOfValues::content,.newSpan10 af|selectOneChoice::content,.newSpan10 af|selectManyChoice::content{
+  width: 380px;
+}
+.newSpan9 af|inputDate::content,.newSpan9 af|inputText::content,.newSpan9 af|inputComboboxListOfValues::content,.newSpan9 af|selectOneChoice::content,.newSpan9 af|selectManyChoice::content{
+  width: 340px;
+}
+.newSpan8 af|inputDate::content,.newSpan8 af|inputText::content,.newSpan8 af|inputComboboxListOfValues::content,.newSpan8 af|selectOneChoice::content,.newSpan8 af|selectManyChoice::content{
+  width: 300px;
+}
+.newSpan7 af|inputDate::content,.newSpan7 af|inputText::content,.newSpan7 af|inputComboboxListOfValues::content,.newSpan7 af|selectOneChoice::content,.newSpan7 af|selectManyChoice::content{
+  width: 260px;
+}
+.newSpan6 af|inputDate::content,.newSpan6 af|inputText::content,.newSpan6 af|inputComboboxListOfValues::content,.newSpan6 af|selectOneChoice::content,.newSpan6 af|selectManyChoice::content{
+  width: 220px;
+}
+.newSpan5 af|inputDate::content,.newSpan5 af|inputText::content,.newSpan5 af|inputComboboxListOfValues::content,.newSpan5 af|selectOneChoice::content,.newSpan5 af|selectManyChoice::content{
+  width: 180px;
+}
+.newSpan4 af|inputDate::content,.newSpan4 af|inputText::content,.newSpan4 af|inputComboboxListOfValues::content,.newSpan4 af|selectOneChoice::content,.newSpan4 af|selectManyChoice::content{
+  width: 140px;
+}
+
+.minSpan4 af|selectOneChoice::content
+{
+   min-width: 140px; 
+}
+
+.newSpan3 af|inputDate::content,.newSpan3 af|inputText::content,.newSpan3 af|inputComboboxListOfValues::content,.newSpan3 af|selectOneChoice::content,.newSpan3 af|selectManyChoice::content{
+  width: 100px;
+}
+.newSpan2 af|inputDate::content,.newSpan2 af|inputText::content,.newSpan2 af|inputComboboxListOfValues::content,.newSpan2 af|selectOneChoice::content,.newSpan2 af|selectManyChoice::content{
+  width: 60px;
+}
+.newSpan1 af|inputDate::content,.newSpan1 af|inputText::content,.newSpan1 af|inputComboboxListOfValues::content,.newSpan1 af|selectOneChoice::content,.newSpan1 af|selectManyChoice::content{
+  width: 20px;
+}
+
+
+
+
+/* Written for Asset Information for spacing between the Labels and Links on the headers*/
+/* Needs to be checked in overall scenarios */
+.h3.AFInstructionText
+{
+   padding-right: 10px;
+}
+
+
+
+
+/*********************************************************
+******************TABLES SKINNING BEGIN*******************
+**********************************************************/
+
+
+.currency
+{
+    text-align: right!important;
+    padding-right: 20px;
+}
+
+@agent gecko
+{
+    .currency
+    {
+        text-align: right!important;
+        padding-right: 25px;
+    }   
+}
+
+af|commandLink.nav-tabs 
+{
+   border-top: none;
+   border-bottom: 0;
+   margin-top: -1px;
+   margin-bottom: 0;
+}
+
+af|commandLink.nav-tabs 
+{
+    border-color: rgba(0, 0, 0, 0);
+    background: #E5E5E5;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+}
+
+af|commandLink.nav-tabs 
+{
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+}
+
+af|commandLink.nav-tabs 
+{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    padding-left: 12px;
+    line-height: 2;
+    position: relative;
+}
+
+af|commandLink.nav-tabs .nav
+{
+    margin: 0;
+    list-style: none;
+}
+/*Striped Table Skinning*/
+af|table.table-striped.table-bordered.message-table
+{
+    -tr-inhibit: background;
+    
+}
+
+af|table.table-striped.table-bordered.message-table af|column::column-header-cell af|selectBooleanCheckbox::content,
+af|table.table-striped.table-bordered.message-table af|column::data-cell af|selectBooleanCheckbox::content,
+af|table.table-striped.table-bordered.message-table af|column::banded-data-cell af|selectBooleanCheckbox::content{
+    margin-left: -4px;
+}
+
+@agent gecko 
+{
+    af|table.table-striped.table-bordered.message-table af|column::column-header-cell af|selectBooleanCheckbox::content
+    {
+        margin-left: 1px;
+    }
+    af|table.table-striped.table-bordered.message-table af|column::data-cell af|selectBooleanCheckbox::content
+    {
+        margin-left:0px;
+    }
+    af|table.table-striped.table-bordered.message-table af|column::banded-data-cell af|selectBooleanCheckbox::content
+    {
+        margin-left:0px;
+    }
+    
+}
+
+@agent ie and (version=8){
+    af|table.table-striped.table-bordered.message-table af|column::column-header-cell af|selectBooleanCheckbox::content
+    {
+        margin-left: 1px;
+    }
+    af|table.table-striped.table-bordered.message-table af|column::data-cell af|selectBooleanCheckbox::content
+    {
+        margin-left:0px;
+    }
+    af|table.table-striped.table-bordered.message-table af|column::banded-data-cell af|selectBooleanCheckbox::content
+    {
+        margin-left:0px;
+    }
+}
+
+.table-striped.table-bordered.message-table af|column::column-header-cell
+{
+    background: transparent ;
+    font-weight: bold;
+    border-left: 1px solid #DEDEDE!important;
+    padding: 8px;
+    text-align: left;
+    
+    background: #efefef;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod?EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #EFEFEF 0%, #F9F9F9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EFEFEF), color-stop(100%,#F9F9F9));
+    background: -webkit-linear-gradient(top, #EFEFEF 0%,#F9F9F9 100%);
+    background: -o-linear-gradient(top, #EFEFEF 0%,#F9F9F9 100%);
+    background: -ms-linear-gradient(top, #EFEFEF 0%,#F9F9F9 100%);
+    background: linear-gradient(to bottom, #EFEFEF 0%,#F9F9F9 100%);
+}
+
+af|panelGroupLayout.modal-body .table-striped.table-bordered.message-table af|column::column-header-cell
+{
+    padding: 8px;
+    width: 90px;
+}
+
+af|panelGroupLayout.provider-details-table table
+{
+    width: 100%!important;
+}
+
+@agent ie and (version=8)
+{
+    .table-striped.table-bordered.message-table af|column::column-header-cell{background:#EFEFEF;}
+}
+
+.table-striped.table-bordered.message-table af|column::data-cell,.table-striped.table-bordered.message-table af|column::banded-data-cell 
+{
+    border:none !important;
+    background: transparent;
+}
+
+.table-striped.table-bordered.message-table af|column::data-cell
+{
+    border-top:1px solid #DEDEDE!important;
+    border-left:1px solid #DEDEDE!important;
+    padding:8px;
+    background:#F9F9F9;
+}
+
+af|panelGroupLayout.modal-body .table-striped.table-bordered.message-table af|column::data-cell
+{
+    padding: 8px;
+    width: 90px;
+}
+    
+af|panelGroupLayout.modal-body .table-striped.table-bordered.message-table af|column::banded-data-cell 
+{
+    padding: 8px;
+    width: 90px;
+}
+
+.table-striped.table-bordered.message-table af|column::banded-data-cell 
+{
+    border-top:1px solid #DEDEDE!important;
+    border-left:1px solid #DEDEDE!important;
+   /* padding: 8px 0 8px 8px;*/
+   padding: 8px;
+}
+
+
+
+.table-striped.table-bordered.message-table af|column::column-header-table{width:100%!important;}
+.table-striped.table-bordered.message-table af|table::data-table{width:100%!important;}
+
+@agent gecko
+{
+    .table-striped.table-bordered.message-table af|table::data-table af|column::data-cell.striped_first_col{width: 0px!important;}
+}
+
+@agent gecko
+{
+    .StripedCol1_min{width:126px!important;}
+    .StripedCol2_min{width:95px!important;}
+    .StripedCol3_min{width:95px!important;}
+    .StripedCol4_min{width:98px!important;}
+    .StripedCol5_min{width:96px!important;}
+    .StripedCol6_min{}
+    .stripedCol1{width:189px!important;}
+    .stripedCol2{width: 86px!important;}
+    .stripedCol3{width: 141px!important;}
+    .stripedCol4{width: 141px!important;}
+    .stripedCol5{width: 120px!important;}
+    
+    .striped4Column1{width:176px!important;}
+    .striped4Column2{width:166px!important;}
+    .striped4Column3{width:166px!important;}
+    .striped4Column4{width:180px!important;}
+}
+
+@agent gecko
+{
+    .coverageStripedCol1{width:189px!important;}
+    .coverageStripedCol2{width: 86px!important;}
+    .coverageStripedCol3{width: 86px!important;}
+    .coverageStripedCol4{width: 96px!important;}
+    .coverageStripedCol5{width: 96px!important;}
+    .coverageStripedCol6{width: 120px!important;}
+}
+
+@agent ie and (version=8)
+{
+    .coverageStripedCol1{width:189px!important;}
+    .coverageStripedCol2{width: 86px!important;}
+    .coverageStripedCol3{width: 86px!important;}
+    .coverageStripedCol4{width: 96px!important;}
+    .coverageStripedCol5{width: 96px!important;}
+    .coverageStripedCol6{width: 120px!important;}
+}
+
+@agent ie and (version=8)
+{
+    .StripedCol1_min, .noBorderColumn1{width:126px!important;}
+    .StripedCol2_min, .noBorderColumn2{width:95px!important;}
+    .StripedCol3_min, .noBorderColumn3{width:95px!important;}
+    .StripedCol4_min, .noBorderColumn4{width:98px!important;}
+    .StripedCol5_min, .noBorderColumn5{width:96px!important;}
+    .StripedCol6_min, .noBorderColumn6{}
+    .stripedCol1{width:189px!important;}
+    .stripedCol2{width: 86px!important;}
+    .stripedCol3{width: 141px!important;}
+    .stripedCol4{width: 141px!important;}
+    .stripedCol5{width: 120px!important;}
+    
+    .striped4Column1{width:176px!important;}
+    .striped4Column2{width:166px!important;}
+    .striped4Column3{width:166px!important;}
+    .striped4Column4{width:180px!important;}
+}
+
+/*********************************************************
+******************TABLES SKINNING END*********************
+**********************************************************/
+
+
+/*********************************************************
+********************WELL SKINNING BEG*********************
+**********************************************************/
+/*Well Skinning*/
+af|panelGroupLayout.well,
+af|panelStretchLayout.well {
+    line-height: 1.35em;
+    padding: 4px 12px;
+    color: #333;
+    background: #FFF;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod?EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #FFF 0%, #E5E5E5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(100%,#E5E5E5));
+    background: -webkit-linear-gradient(top, #FFF 0%,#E5E5E5 100%);
+    background: -o-linear-gradient(top, #FFF 0%,#E5E5E5 100%);
+    background: -ms-linear-gradient(top, #FFF 0%,#E5E5E5 100%);
+    background: linear-gradient(to bottom, #FFF 0%,#E5E5E5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+    border: 1px solid #E6E6E6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+    margin: 20px 0;
+    overflow: hidden;
+}
+af|panelGroupLayout.well-flat {
+    background: #f2f2f2;
+}
+af|panelGroupLayout.premium-assistance-history {
+	margin: 0;
+	font-size: 0.85em;
+}
+af|panelGroupLayout.premium-assistance-history af|commandLink {
+    font-size: 1em;
+}
+af|panelGroupLayout.premium-assistance-history .paragraph {
+	padding: 0;
+	margin-bottom: 5px;
+        font-weight: bold;
+}
+
+af|panelGroupLayout.well {
+    min-height: 20px;
+}
+
+af|panelGroupLayout.well-small {
+    padding: 9px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.well_small_heading
+{
+    line-height:2!important;
+}
+
+
+af|panelGroupLayout.well af|panelGroupLayout.inline-buttons af|commandLink
+{
+    float: left;
+    margin-left: 20px;
+}
+/*Well Skinning*/
+
+/*********************************************************
+********************WELL SKINNING END*********************
+**********************************************************/
+
+
+/*********************************************************
+********************Chart - TABLE BEGIN*******************
+********ONLY FOR DAILY LIVING INFORMATION PAGE************
+**********************************************************/
+af|panelGroupLayout.chart
+{
+    border: 1px solid #C4C4C4;
+    margin: 20px 0;
+}
+
+af|panelGroupLayout.chart-heading
+{
+    font-weight: bold;
+    padding: 10px;
+    background: #FFF;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod?EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #FFF 0%, #E5E5E5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(100%,#E5E5E5));
+    background: -webkit-linear-gradient(top, #FFF 0%,#E5E5E5 100%);
+    background: -o-linear-gradient(top, #FFF 0%,#E5E5E5 100%);
+    background: -ms-linear-gradient(top, #FFF 0%,#E5E5E5 100%);
+    background: linear-gradient(to bottom, #FFF 0%,#E5E5E5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+    border-bottom: 1px solid #C4C4C4;
+}
+
+af|panelGroupLayout.chartFirstChild
+{
+    margin-top:10px;
+}
+
+af|panelGroupLayout.chartHeaderCol1
+{
+    font-weight:bold;
+    width:265px;
+}
+
+af|panelGroupLayout.chartHeaderCol2
+{
+    font-weight:bold;
+    width:140px;
+}
+
+af|panelGroupLayout.chartHeaderCol3
+{
+    font-weight:bold;
+    width:150px;
+}
+
+af|panelGroupLayout.chartHeaderCol4
+{
+    font-weight:bold;
+    width:140px;
+}
+
+af|panelGroupLayout.chartLastChild
+{
+    margin-bottom:10px;
+}
+
+af|panelGroupLayout.chartCol1
+{
+    width:220px;
+    padding-left:10px;
+}
+
+af|panelGroupLayout.chartCol2
+{
+    width:145px;
+}
+
+af|panelGroupLayout.chart_last_column af|selectOneChoice.newSpan4.chart_last_select_box::label
+{
+    display:none;
+}
+
+af|panelGroupLayout.chart_last_column af|selectOneChoice.newSpan4.chart_last_select_box::content
+{
+    margin-left: 10px;
+}
+
+
+/*For Text Area*/
+.textAreaHeading.p_AFMultiRow textarea
+{
+    height:80px;
+    width: 708px;
+    margin-top:10px;
+}
+
+.textAreaHeading.p_AFMultiRow label
+{
+    line-height:1.35;
+    font-size:.875em; /*14px;*/
+    margin-left: -2px!important;
+}
+
+.textAreaHeading.p_AFMultiRow .AFPanelFormLayoutContentCell
+{
+    padding: 0!important;
+}
+
+.p_AFMultiRow 
+{
+    line-height:1.35;
+}
+
+/*MISC Class to make output Text bold*/
+.strong_font{
+    font-weight: bold;
+}
+/*********************************************************
+********************Chart - TABLE END*******************
+********ONLY FOR DAILY LIVING INFORMATION PAGE************
+**********************************************************/
+
+
+
+/*Styles from hix.min.css*/
+/********************************/
+/* without ADF skinning support */
+/********************************/
+.separator
+{
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #460f33;
+}
+
+/* Badge for number of messages */
+.badge
+{
+    margin-left: 0.5em;
+    background: #910D62;
+    line-height: 1.2em;
+    padding: 0.12em 0.55em;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    display: inline-block;
+    font-size: 11.844px;
+    font-weight: bold;
+    color: #FFF;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Search box placement*/
+.search 
+{
+    /*height: 0.9em;*/
+    /*line-height: 1;*/
+    /*margin: 0 10px 0 0;*/
+}
+
+.application-wrap {
+	background: url('/images/application-background.jpg') left top repeat;
+	padding: 20px 0;
+        min-width: 940px; /* Prevent issues when zooming near 200% */
+}
+
+/*.pull-right{ float: right!important;}*/
+
+.required-statement {text-align: right;font-size: 0.928em;}
+/**:focus{outline: none;}*/
+
+.h3.heading{
+    font-size: 1.10em;
+    line-height: 1.35em;
+    font-weight: bold;
+}
+
+/*For input prepend*/
+.input-prepend .add-on,
+.input-append .add-on {
+    display: inline-block;
+    width: auto;
+    height: 20px;
+    min-width: 16px;
+    padding: 4px 5px !important;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFF;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    margin-right: -1px;
+    vertical-align: top;
+}
+
+@agent gecko
+{
+    .input-prepend .add-on {margin-top:1px;}
+}
+
+
+/**********************************************
+**********ADF Flow fixes for IE8- begins***********
+**********************************************/
+
+
+@agent ie and (version:8)
+{
+       af|table.table-bordered .col1
+        {
+        width:188px!important;
+        }
+}
+
+@agent ie and (version:8)
+{
+       af|table.table-bordered .col2
+        {
+        width:138px!important;
+        }
+}
+
+
+
+@agent ie and (version:8)
+{
+       .h3.AFInstructionText
+        {
+        padding-right:5px!important;
+        }
+}
+
+@agent ie and (version:8)
+{
+       .newspan4_tuner
+        {
+        font-size:12px!important;
+        line-height:5px!important;        
+        }
+}
+
+
+@agent ie and (version:8)
+{
+    af|selectBooleanCheckbox::item-text, af|selectManyCheckbox::item-text
+    {
+        margin-top: -20px;
+    }
+}
+
+/**********************************************
+**********ADF Flow fixes for IE8- END***********
+**********************************************/
+
+
+
+
+
+/****************************************
+ ************ ADF COMPONENTS ************
+ ****************************************/
+
+
+/* MESSAGES */
+af|message {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+af|message.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #2a617d;
+}
+af|message.alert-success,
+af|panelGroupLayout.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+af|message.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #a23f3d;
+}
+
+/* HEADERS */
+af|panelHeader::title-table table td {
+  width: auto !important;
+}
+.AFFatalIcon:alias {
+	background: url('/images/icons/icon-error.png') left top no-repeat;
+}
+.AFErrorIcon:alias {
+	background: url('/images/icons/icon-error.png') left top no-repeat;
+}
+.AFWarningIcon:alias {
+	background: url('/images/icons/icon-warning.png') left top no-repeat;
+}
+.AFInfoIcon:alias {
+	background: url('/images/icons/icon-info.png') left top no-repeat;
+}
+
+/* Buttons */
+af|commandButton, af|commandButton:active, af|commandButton:hover, af|commandButton:active:hover, af|commandButton:focus:hover {
+    -tr-inhibit: background-color;
+    -tr-inhibit: color;
+    -tr-inhibit: font-family;
+    -tr-inhibit: font-size;
+    -tr-inhibit: font-weight;
+}
+.af_commandButton.p_AFTextOnly, .af_goButton.p_AFTextOnly {
+    -tr-inhibit: background-color;
+}
+
+.AFButtonBackground:alias, .AFButtonBackgroundActive:alias, .AFButtonBackgroundDisabled:alias, .AFButtonBackgroundFocus:alias, .AFButtonBackgroundHover:alias {
+    -tr-inhibit: background-color;
+    -tr-inhibit: background;
+}
+
+.AFButtonForeground:alias, .AFButtonForegroundHover:alias, .AFButtonForegroundDepressed:alias, .AFButtonForegroundDisabled:alias {
+    -tr-inhibit: color;
+    -tr-inhibit: font-family;
+    -tr-inhibit: font-size;
+    -tr-inhibit: padding;
+}
+
+af|inputText::content {
+    font-size: .875em; /*14px;*/
+  font-weight: normal;
+  line-height: 20px;
+  height: 20px;
+  padding: 4px 6px;
+  /* margin-bottom: 10px; */
+  color: #242424;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+af|inputText::content:focus {
+     border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+}
+@agent ie and (version:6) and (version:7) and (version:8) and (version:9) {
+    af|inputText::content:focus {
+        outline: thin dotted;
+    }
+}
+af|inputText::context-content {
+    
+}
+
+af|inputText::dynamic-help-icon-style {
+    
+}
+af|inputText::label {
+    
+}
+af|inputText::changed-icon {
+    
+}
+af|inputText::dynamic-help-icon {
+    
+}
+af|inputText.input-mini::content {
+  width: 60px;
+}
+af|inputText.input-small::content {
+  width: 90px;
+}
+af|inputText.input-medium::content {
+  width: 150px;
+}
+af|inputText.input-large::content {
+  width: 210px;
+}
+af|inputText.input-xlarge::content {
+  width: 270px;
+}
+af|inputText.input-xxlarge::content {
+  width: 530px;
+}
+af|inputText.span24::content, textarea.span24, .uneditable-input.span24 {
+  width: 926px;
+}
+af|inputText.span23::content, textarea.span23, .uneditable-input.span23 {
+  width: 886px;
+}
+af|inputText.span22::content, textarea.span22, .uneditable-input.span22 {
+  width: 846px;
+}
+af|inputText.span21::content, textarea.span21, .uneditable-input.span21 {
+  width: 806px;
+}
+af|inputText.span20::content, textarea.span20, .uneditable-input.span20 {
+  width: 766px;
+}
+af|inputText.span19::content, textarea.span19, .uneditable-input.span19 {
+  width: 726px;
+}
+af|inputText.span18::content, textarea.span18, .uneditable-input.span18 {
+  width: 686px;
+}
+af|inputText.span17::content, textarea.span17, .uneditable-input.span17 {
+  width: 646px;
+}
+af|inputText.span16::content, textarea.span16, .uneditable-input.span16 {
+  width: 606px;
+}
+af|inputText.span15::content, textarea.span15, .uneditable-input.span15 {
+  width: 566px;
+}
+af|inputText.span14::content, textarea.span14, .uneditable-input.span14 {
+  width: 526px;
+}
+af|inputText.span13::content, textarea.span13, .uneditable-input.span13 {
+  width: 486px;
+}
+af|inputText.span12::content, textarea.span12, .uneditable-input.span12 {
+  width: 446px;
+}
+af|inputText.span11::content, textarea.span11, .uneditable-input.span11 {
+  width: 406px;
+}
+af|inputText.span10::content, textarea.span10, .uneditable-input.span10 {
+  width: 366px;
+}
+af|inputText.span9::content, textarea.span9, .uneditable-input.span9 {
+  width: 326px;
+}
+af|inputText.span8::content, textarea.span8, .uneditable-input.span8 {
+  width: 286px;
+}
+af|inputText.span7::content, textarea.span7, .uneditable-input.span7 {
+  width: 246px;
+}
+af|inputText.span6::content, textarea.span6, .uneditable-input.span6 {
+  width: 206px;
+}
+af|inputText.span5::content, textarea.span5, .uneditable-input.span5 {
+  width: 166px;
+}
+af|inputText.span4::content, textarea.span4, .uneditable-input.span4 {
+  width: 126px;
+}
+af|inputText.span3::content, textarea.span3, .uneditable-input.span3 {
+  width: 86px;
+}
+af|inputText.span2::content, textarea.span2, .uneditable-input.span2 {
+  width: 46px;
+}
+af|inputText.span1::content, textarea.span1, .uneditable-input.span1 {
+  width: 6px;
+}
+
+/****************************************
+ ******* HEADER AND USER ACTIONS ********
+ ****************************************/
+af|panelGroupLayout.header-main {
+    background: #555758;
+    color: #ffffff;
+    min-width: 940px; /* Prevent issues when zooming near 200% */
+    min-height: 2em;
+    position: relative;
+}
+af|panelGroupLayout.header-main af|panelGroupLayout.user-actions {
+    /*float: none; Commented by UX*/
+    height: auto;
+}
+af|panelGroupLayout.header-main af|panelList::link,
+af|panelGroupLayout.header-main af|panelList.user-actions af|goLink,
+af|panelGroupLayout.header-main af|commandToolbarButton::text {
+    color: #ffffff;
+}
+af|panelGroupLayout.header-main af|panelList.user-actions af|goButton {
+    color: #333333;
+}
+af|panelGroupLayout.header-main af|commandToolbarButton:hover {
+    background: transparent;
+    text-decoration: none;
+}
+af|panelGroupLayout.header-main af|commandToolbarButton::dropdown-cell:hover {
+    cursor: pointer;
+}
+af|panelGroupLayout.header-main af|panelList.user-actions ul li .btn {
+    margin-left: 10px;
+}
+af|panelGroupLayout.header-main af|panelList.user-actions {
+    position: absolute;
+    right: 20px;
+}
+af|panelGroupLayout.header-main af|panelList.user-actions ul {
+    margin: 0;
+    padding: 0;
+    height: 2em;
+}
+af|panelGroupLayout.header-main af|panelList.user-actions ul li {
+    display: block;
+    float: left;
+    height: 1.74em;
+    margin: 0.13em 0;
+    position: relative;
+}
+af|panelGroupLayout.header-main af|panelList.user-actions af|commandToolbarButton::dropdown-cell {
+    border: none;
+}
+af|panelGroupLayout.header-main af|panelList.user-actions af|panelGroupLayout.separated {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #424445;
+}
+af|commandToolbarButton::dropdown-icon-style {
+    background-image: url('/images/header_dropdown_arrow.png');
+    width: 12px;
+    height: 12px;
+    margin-top: 4px;
+}
+af|panelGroupLayout.header-main af|panelList.user-actions af|panelGroupLayout.search {
+    margin-top: 0.13em;
+    margin-bottom: 0.13em;
+}
+af|panelGroupLayout.header-main af|panelList.user-actions af|panelGroupLayout.search af|inputText::content {
+    height: 0.9em;
+    line-height: 0.9em;
+    margin: 0 10px 0 0;
+    padding: 4px 6px;
+    background: #7e6175;
+    border-color: #7e6175;
+    color: #ffffff;
+    width: 120px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+}
+af|panelGroupLayout.header-main af|panelList.user-actions af|panelGroupLayout.search af|commandButton {
+    padding: 0px 6px;
+}
+
+/* NAVIGATION */
+af|panelGroupLayout.nav-main {
+    background: url('/images/navbar-bg.png') left bottom repeat-x #003a50;
+    min-width: 940px; /* Prevent issues when zooming near 200% */
+}
+
+/****************************************
+ *************** FOOTER *****************
+ ****************************************/
+af|panelGroupLayout.footer-main {
+    min-width: 940px;
+    color: #fff;
+    position: relative;
+    background: url('/images/background.jpg') left top repeat #4a4d54;
+    overflow: hidden; /* Prevent homepage ribbon from overflowing at high zoom */
+}
+.non-portal af|panelGroupLayout.footer-main {
+    background: url('/images/static/footer-bg.jpg') left top repeat #4a4d54;
+}
+af|panelGroupLayout.footer-main af|goImageLink {
+    color: #ffffff;
+}
+af|panelGroupLayout.footer-main af|panelGroupLayout td {
+    vertical-align: top;
+}
+af|panelGroupLayout.footer-main af|panelList ul {
+    list-style: none;
+    padding: 0;
+    margin: 2em 0 0;
+    display: block;
+    overflow: hidden;
+}
+af|panelGroupLayout.footer-main af|panelList ul li {
+    display: block;
+    float: left;
+}
+af|panelGroupLayout.footer-main af|panelList::link {
+    color: #ffffff;
+    background: url("/images/static/footer-nav-separator.png") no-repeat scroll left 50% transparent;
+    -tr-rule-ref: selector(".accent-font");
+    padding: 0 12px;
+    display: block;
+}
+af|panelGroupLayout.footer-main af|panelList::link.first-child {
+    padding-left: 0;
+    background: none;
+}
+af|panelGroupLayout.footer-main af|goImageLink.last-child {
+    padding-right: 0;
+    background: none;
+    text-align: center;
+}
+af|panelGroupLayout.footer-main af|goImageLink::text {
+    color: #ffffff;
+    font-size: 9px;
+}
+af|panelGroupLayout.footer-main af|goImageLink {
+    margin-bottom: 10px;
+}
+af|panelGroupLayout.footer-main af|goImageLink::image {
+    display: block;
+}
+af|panelGroupLayout.footer-main .seal {
+    display: block;
+    text-align: center;
+}
+af|panelGroupLayout.footer-main .seal img {
+	margin: 1.5em auto 0.5em;
+}
+af|panelGroupLayout.footer-main af|panelGroupLayout.ribbon {
+        width: 100%;
+	margin-bottom: 40px;
+	background: url('/images/static/footer-ribbon.png') left top no-repeat;
+	line-height: 78px;
+	padding-left: 130px;
+}
+af|panelGroupLayout.footer-main af|panelGroupLayout.ribbon af|goImageLink::text {
+    display: none;
+    visibility: hidden;
+}
+af|panelGroupLayout.footer-main af|panelGroupLayout.ribbon af|goImageLink {
+    display: block;
+    margin: 17px 0 0 10px;
+}
+af|panelGroupLayout.footer-main af|panelGroupLayout.ribbon af|goImageLink.first-child {
+    margin-left: 30px;
+}
+
+af|panelGroupLayout.footer-main af|panelGroupLayout.ribbon-tail {
+    position: absolute;
+    left: 780px;
+    bottom: 40px;
+    right: 0;
+    background: url('/images/static/footer-ribbon-tail.png') left bottom repeat-x;
+    width: 100%;
+}
+
+/* RANGE SLIDER (PH: ANNUAL DEDUCTIBLE) */
+af|panelGroupLayout.annual-deductible-range {
+    background: url('/images/annual-deductible-range-bg.jpg') right top repeat-y #e8e8e8;
+    margin-bottom: 10px;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+af|panelGroupLayout.annual-deductible-range-slider,
+af|panelGroupLayout.annual-deductible-range-input {
+    padding: 20px;
+}
+af|panelGroupLayout.range-slider-detail {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 10px;
+    -tr-rule-ref: selector(".accent-font");
+    line-height: 1.1;
+}
+af|panelGroupLayout.range-slider-detail td {
+    text-align: center;
+    vertical-align: middle;
+}
+af|panelGroupLayout.range-slider-detail af|panelGroupLayout.range-slider-detail-left {
+    width: 113px;
+    line-height: 1.1;
+}
+af|panelGroupLayout.range-slider-detail af|panelGroupLayout.range-slider-arrow {
+    width: 240px;
+}
+af|panelGroupLayout.range-slider-detail af|panelGroupLayout.range-slider-detail-right {
+    width: 113px;
+    line-height: 1.1;
+}
+af|inputRangeSlider.default-range-slider,
+af|inputNumberSlider.default-number-slider {
+    margin: 5px 0;
+}
+af|inputRangeSlider.default-range-slider af|inputRangeSlider::content,
+af|inputNumberSlider.default-number-slider af|inputNumberSlider::content {
+    width: 466px;
+    height: 40px;
+    margin-top: 20px;
+}
+af|inputNumberSlider.default-number-slider af|inputNumberSlider::content {
+    width: 466px;
+}
+af|inputRangeSlider.default-range-slider af|inputRangeSlider::plus-icon-style,
+af|inputRangeSlider.default-range-slider af|inputRangeSlider::minus-icon-style,
+af|inputNumberSlider.default-number-slider af|inputNumberSlider::plus-icon-style,
+af|inputNumberSlider.default-number-slider af|inputNumberSlider::minus-icon-style {
+    display: none;
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+}
+af|inputRangeSlider.default-range-slider af|inputRangeSlider::bar,
+af|inputNumberSlider.default-number-slider af|inputNumberSlider::bar {
+    height: 12px;
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+af|inputRangeSlider.default-range-slider af|inputRangeSlider::bar-outer-border,
+af|inputNumberSlider.default-number-slider af|inputNumberSlider::bar-outer-border{
+    border: none;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+af|inputRangeSlider.default-range-slider af|inputRangeSlider::bar-inner-border,
+af|inputNumberSlider.default-number-slider af|inputNumberSlider::bar-inner-border {
+    border: none;
+}
+af|inputRangeSlider.default-range-slider af|inputRangeSlider::range {
+    background: url('/images/slider-bar.png') left top repeat-x #b4d09b;
+}
+af|inputRangeSlider.default-range-slider af|inputRangeSlider::thumb-icon-style,
+af|inputNumberSlider.default-number-slider af|inputNumberSlider::thumb-icon-style {
+    background: url('/images/slider-handle.png') left top no-repeat;
+    height: 20px;
+    width: 18px;
+    top: -16px;
+}
+af|inputRangeSlider.default-range-slider af|inputRangeSlider::thumb-value-line,
+af|inputNumberSlider.default-number-slider af|inputNumberSlider::thumb-value-line {
+    display: none;
+    visibility: hidden;
+}
+af|inputRangeSlider.default-range-slider af|inputRangeSlider::thumb-value,
+af|inputNumberSlider.default-number-slider af|inputNumberSlider::thumb-value {
+    display: none;
+    visibility: hidden;
+}
+
+.range-slider {
+    background-color: transparent;
+}
+.range-slider, .range-slider div, .range-slider .af_toolbox_row {
+    border: none;
+}
+.range-slider table {
+    width: 100%;
+}
+.range-slider-labels-above .label-left,
+.range-slider-labels-above .label-right {
+    margin-bottom: 10px;
+}
+.range-slider-labels-below .label-left,
+.range-slider-labels-below .label-right {
+    margin-top: 10px;
+}
+.range-slider .label-left {
+    width: 50%;
+    display: block;
+}
+.range-slider .label-right {
+    text-align: right;
+    display: block;
+}
+.range-slider .af_inputRangeSlider_content {
+    width: 100%;
+}
+
+
+
+
+
+/* MISCELLANEOUS */
+/* Muted Text Skinning*/
+af|panelGroupLayout span.muted{color:#676767;}af|panelGroupLayout a.muted:hover{color:#808080}
+
+.clearfloat {
+    clear: both;
+}
+af|panelGroupLayout.standout {
+    box-shadow: 0 0 6px #707070;
+}
+af|panelGroupLayout.standout.span8{width:300px; margin-left:20px;}
+.pull-right {float: right!important;}
+.pull-left { float: left; }
+af|panelGroupLayout.action-buttons {
+    overflow: hidden;
+}
+af|panelGroupLayout.action-buttons-right {
+    text-align: right;
+}
+.paragraph,
+af|panelGroupLayout.paragraph div {
+    display: block;
+    margin-bottom: 7px;
+}
+.bold {font-weight: bold;}
+
+.italic {font-style: italic;}
+
+/****************************************
+ ****** MAIN (LEVEL 0) NAVIGATION *******
+ ****************************************/
+
+
+
+/* LOGIN BOX */
+.login-box {
+    background: #F7F4F1;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+af|panelGroupLayout.login-box h2 {
+    margin-top: 0;
+}
+
+.home af|panelGroupLayout.footer-main {
+    box-shadow: 0 3px 23px 0 #252525;
+}
+/* Added by UX*/
+
+af|commandImageLink.link-br
+{
+    position: absolute;
+    float: left;
+    margin-top: 24px;
+}
+
+
+li a.link-if.show {background:#fff!important; color:#4b7c2b!important;}
+li a.link-sb.show {background:#fff!important; color:#c56724!important;}
+li a.link-br.show {background:#fff!important; color:#c56724!important;}
+
+
+af|panelGroupLayout.caption.plaintext.active
+{
+    margin-top: 76px;
+}
+
+div.caption.plaintext.plaintext.container.active.af_panelGroupLayout{margin-left:0}/*to work for home page only*/
+/*****************************************/
+/*******Skinning For Alert Messages*******/
+/*****************************************/
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.alert.paragraph{
+  color: #c09853;
+}
+
+
+.alert-danger,
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #a23f3d;
+}
+
+.alert-validation{
+    background-color: #f2dede;
+    border:4px #eed3d7;
+    color: #a23f3d;
+    padding:0 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    font-size:11px;
+}
+
+af|dialog, af|dialog::container{background-color:#f2dede;border-color:#eed3d7;color:#a23f3d; -tr-inhibit:padding;}
+af|dialog::content{-tr-inhibit: font-size; font-size:11px;}
+af|dialog::title-bar{}
+af|dialog::title{display:none;}
+af|dialog::footer-button{
+-tr-rule-ref: selector(".btn")
+}
+
+
+.hilite-important {
+    color: #a23f3d;
+}
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #2A617D;
+}
+
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+
+.af_selectOneChoice.p_AFFatal, .af_selectOneChoice.p_AFError, .af_selectOneChoice.p_AFWarning{-tr-inhibit:font-size; font-size:14.5px;}
+.af_panelTip_label, .af_message_help, .af_message_type, .af_message_summary, .af_message_intro, .af_message_detail, .AFNoteWindowHintText{font-size:11px!important;white-space:normal!important;}
+
+af|messages, af|messages::container {
+    background-color:#f2dede;
+    border-color:#eed3d7;
+    color:#a23f3d;
+    -tr-inhibit:padding;
+    padding:2px;
+    white-space:normal!important;
+}
+af|messages::header-text,
+af|messages::type,
+af|messages::intro,
+af|messages img {
+    display: none;
+    visibility: hidden;
+}
+af|messages::message-group-title {
+    white-space: normal !important;
+    width: 50% !important;
+    font-size: .7em !important;
+}
+
+
+/*****************************************/
+/*******Skinning For Alert Messages*******/
+/*****************************************/
+
+.plan-filters {
+background: #efefef;
+margin: 20px 0;
+padding: 20px;
+position: relative;
+}
+
+.carriers .carrier-logo{
+    border: 1px solid #000;
+    background: #fff;
+    padding: 4px;
+    margin-left: 10px;
+    margin-left: 35px;
+}
+
+.carriers af|panelFormLayout{ margin-top: 20px;}
+
+.carriers .carrier-logo{
+    margin-top: -28px;
+    margin-bottom: 30px;
+}
+
+.heading{
+    font-size: 1.10em;
+line-height: 1.35em;
+font-weight: bold;
+}
+
+.wrap{background: url('../images/gray-border.jpg') 50% top repeat-y;}
+
+.action-button {
+position: absolute;
+bottom: 20px;
+right: 20px;
+}
+
+af|panelGroupLayout.span11 af|panelGroupLayout  af|selectBooleanCheckbox::label{display: none;}
+
+
+af|commandLink.view-plan-details{
+    display: block;
+    float: left;
+   /* margin-top: -0.2em;
+    margin-left: 20px;
+    padding-top: 32px;*/
+    color: #444;
+    text-decoration: underline!important;
+}
+
+af|commandLink.view-plan-details:hover{ color: #252525;}
+
+af|commandButton.label-green{
+  background-color: #468847!important;
+}
+
+af|commandButton.label-green{
+    opacity:1!important;
+    color:#fff;
+    font-weight: bold;
+}
+
+af|commandButton.label{
+    display: inline-block;
+    padding: 4px 6px;
+    font-size: 11.844px;
+    font-weight: bold;
+    color: #ffffff;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #910d62;
+}
+
+
+/*For output text component*/
+.results-caption {
+	text-align: left;
+	padding-bottom: 8px;
+	margin: 0;
+}
+
+af|panelGroupLayout.plans-header{ overflow: hidden;}
+
+.progress-bar{
+        height:10px!important;
+
+	display: block;
+	margin: 4px 6px 0;
+	padding: 0.15em 0;
+	border: 1px solid #a9a9a9;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+	background: url('/images/progress.jpg') right top repeat #fff;
+}
+
+
+af|panelGroupLayout.available-plan-count {
+	border: 1px solid #d6d6d6;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+	font-size: 0.8em;
+  line-height: 1;
+  padding: 0.5em 0;
+  text-align: center !important;
+}
+
+
+af|panelGroupLayout.available-plan-count af|panelGroupLayout{
+    padding-top:3px;
+    width:130px;
+    margin: 0 auto;}
+
+af|panelGroupLayout.available-plan-count.span5 {margin-left:-2px;}
+
+af|panelGroupLayout.well-plan-helper-gateway {
+	margin: 0;
+	background: #e8e5e3;
+	border-color: #D6D6D6;
+}
+
+.plan-helper-gateway{color: #4f5a74;margin-top: 5px;}
+
+.plan-helper-gateway.gateway_heading{
+font-size: 1.25em;
+font-weight: bold;
+}
+
+.metal-Bronze-font, .metal-Silver-font, .metal-ConnectorCare-font, .metal-Catastrophic-font, .metal-Gold-font, .metal-Platinum-font {font-size: 1.25em;}
+
+af|panelGroupLayout.well.metal-Bronze {
+  background: url('../images/plan-rollup-Bronze.jpg') left bottom repeat-x #f0ded7!important;
+  filter: none;
+}
+.metal-Bronze{color: #CD907F;}
+af|panelGroupLayout.well.metal-ConnectorCare {
+  background: url('../images/plan-rollup-ConnectorCare.jpg') left bottom repeat-x #f0ded7!important;
+  filter: none;
+}
+.metal-ConnectorCare{color: #CD907F;}
+af|panelGroupLayout.well.metal-Catastrophic {
+  background: url('../images/plan-rollup-Catastrophic.jpg') left bottom repeat-x #d9dada!important;
+  filter: none;
+}
+.metal-Catastrophic{color: #CD907F;}
+
+
+af|panelGroupLayout.well.metal-Silver {
+  background: url('../images/plan-rollup-Silver.jpg') left bottom repeat-x #dbdcda!important;
+  filter: none;
+}
+
+.metal-Silver{color: #7e898c;}
+af|panelGroupLayout.well.metal-Gold {
+  background: url('../images/plan-rollup-Gold.jpg') left bottom repeat-x #ebdecc!important;
+  filter: none;
+}
+
+.metal-Gold{color: #cca865;}
+af|panelGroupLayout.well.metal-Platinum {
+  background: url('../images/plan-rollup-Platinum.jpg') left bottom repeat-x #d5dbda!important;
+  filter: none;
+}
+
+.metal-Platinum{color: #7a979c;}
+af|panelGroupLayout.well af|panelList UL
+{
+    padding-left: 1em;
+}
+
+af|panelGroupLayout.well af|panelList UL li
+{
+    line-height: 1.5em;
+}
+
+
+.radio_bottom_text{margin-left:21px;}
+
+@agent gecko{.radio_bottom_text{margin-left:19px;}}
+
+/*modal styles ends*/
+
+af|panelGroupLayout.metal_box_dimensions{width: 173px!important}
+
+af|panelGroupLayout.content-flush.content af|panelGroupLayout.content-wrap.page-intro  af|pageCustomizable af|region af|panelGroupLayout.settings-section span.h2{font-weight:bold;font-size:16px;}
+af|region p {
+    margin-top: 0 !important;
+}
+
+/***tab focus **/
+
+
+/****end tab focus **/
+
+/**for WT4 - subsidy*/
+af|selectOneChoice.label-inline::label
+{
+white-space: nowrap;
+float: right;
+margin-right: -10px;
+margin-top: 8px;
+}
+
+af|panelFormLayout.mediaItem
+{
+padding-left: 0!important;
+}
+/**for WT4 -end - subsidy*/
+
+/*Page header spacing for all WT4 pages */
+.panel-header{line-height: 2.5em;}
+
+/*Skinning for text which are followed by buttons */
+af|panelGroupLayout.inline-with-button {
+	margin: 0;
+	padding: 5px 0;
+}
+
+/*White space overridden */
+nobr{white-space:normal!important}
+
+/*Skinning for Submit.jspx WT4 End*/
+af|panelGroupLayout.layout-content {
+    width: 520px;
+    float: left;
+}
+
+af|panelGroupLayout.block, af|panelFormLayout.block
+{
+    margin-bottom: 15px;
+}
+af|panelGroupLayout.gutter-left, .gutter-left {
+	margin-left: 20px;
+}
+af|panelGroupLayout.gutter-right {
+	margin-right: 20px;
+}
+af|panelGroupLayout.margin-bottom-large
+{
+    margin-bottom: 30px;
+}
+/*Skinning for Submit.jspx WT4 End*/
+/*Skinning for WT4: Review and Sign Screen*/
+
+
+
+af|inputText.label-inline::label
+{
+    white-space: nowrap;
+    float: right;
+    margin-right: -35px;
+    margin-top: 8px;
+}
+
+/*miscellaneous class for aligning the text to the right side*/
+
+
+
+
+/* Skinning for Search Box in WT4 Pages BEGIN*/
+af|panelGroupLayout.searchBox
+{
+    margin: 15px 0 0 -12px;
+}
+
+.searchBox af|commandButton
+{
+    margin-top: 0px;
+}
+
+.input-medium af|inputText::content{
+  width: 150px;
+}
+
+.search-query af|inputText::content {
+  padding-right: 14px;
+  padding-right: 4px \9;
+  padding-left: 14px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+  margin-bottom: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.title {
+    line-height: 2em;
+}
+af|panelGroupLayout.providers {
+margin: 15px 0;
+}
+
+af|panelGroupLayout.provider {
+position: relative;
+border: 1px solid #EEE;
+width: 169px;
+height: 9em;
+float: left;
+white-space: normal;
+margin: 10px 0;
+}
+
+af|panelGroupLayout.provider af|panelGroupLayout.provider-wrap {
+padding: 10px;
+font-size: 0.857em;
+}
+
+/* Skinning for Search Box in WT4 Pages END*/
+
+/*Skinning for placing pagination at bottom of table - NEEDS TO BE TESTED*/
+af|table::control-bar-top
+{
+   /* position: absolute;
+    bottom: 0;
+    margin-top: 10px;*/
+    background: transparent!important;
+    background-color: transparent!important;
+    margin-bottom: 10px;
+}
+
+.pagination_text{
+    line-height:2em;
+}
+
+
+
+/* UPDATES BY JOE BEGINNING 20130614 */
+
+/*modifed by UX*/
+af|panelGroupLayout.action-box {
+	background: #fff;
+	padding: 10px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.block-separator-bottom {
+	border-bottom: 1px solid #d6d6d6;
+	padding-bottom: 15px;
+}
+.block-separator-top {
+	border-top: 1px solid #d6d6d6;
+	padding-top: 15px;
+	margin: 15px 0 0;
+}
+.margin-top-large {
+	margin-top: 30px;
+}
+.margin-top-medium {
+	margin-top: 20px;
+}
+.margin-top-small {
+	margin-top: 10px;
+}
+.margin-top-none, .margin-top-none h1, .margin-top-none h2, .margin-top-none h3 {
+    margin-top: 0 !important;
+}
+.margin-bottom-small {
+	margin-bottom: 10px;
+}
+.margin-bottom-medium {
+	margin-bottom: 20px;
+}
+.margin-bottom-large {
+	margin-bottom: 30px;
+}
+.margin-bottom-none {
+    margin-bottom: 0 !important;
+}
+
+.mahix0614 .af_inputText.AFNoWrapMarker .af_inputText_label,
+.mahix0614 .af_inputListOfValues.AFNoWrapMarker .af_inputListOfValues_label,
+.mahix0614 .af_inputComboboxListOfValues.AFNoWrapMarker .af_inputComboboxListOfValues_label,
+.mahix0614 .af_selectOneChoice.AFNoWrapMarker .af_selectOneChoice_label,
+.mahix0614 .af_inputDate,
+.mahix0614 .af_panelHeader_title-text0,
+.mahix0614 .af_panelHeader_title-text2,
+.mahix0614 .af_panelHeader_title-text3,
+.mahix0614 .af_panelHeader_title-text4,
+.mahix0614 .af_panelHeader_title-text5,
+.mahix0614 .af_selectOrderShuttle_item-label,
+.mahix0614 .af_selectManyShuttle_item-label,
+.mahix0614 .af_menu_child-container .af_menu_detachable-header,
+.mahix0614 .af_selectManyChoice,
+.mahix0614 .af_inputListOfValues,
+.mahix0614 .af_inputComboboxListOfValues,
+.mahix0614 .af_commandLink.WCSearchResultsPrevNextLink {
+    white-space: normal;
+}
+.mahix0614 .AFLabel:alias,
+.mahix0614 .af_selectOneRadio_item-text,
+.mahix0614 af|selectManyCheckbox::item-text {
+    vertical-align: auto;
+    margin: 0;
+}
+.mahix0614 .af_selectOneRadio_content-input,
+.mahix0614 .af_selectBooleanCheckbox_content-input,
+.mahix0614 .af_selectManyCheckbox_content-input {
+    padding: 0;
+}
+.mahix0614 .AFPanelFormLayoutContentCell
+{
+    padding-right: 0;
+}
+.mahix0614 af|message, .mahix0614 af|message .af_message_detail {
+    font-size: 1em;
+}
+.mahix0614 .required-statement {
+    margin-bottom: 10px;
+}
+.mahix0614 af|selectOneRadio::item-text {
+    vertical-align: bottom;
+    margin: 0;
+}
+.mahix0614 af|selectOneRadio::content-input {
+    vertical-align: bottom;
+}
+.mahix0614 af|selectOneRadio::content {
+    font-size: 1em;
+}
+.mahix0614 .af_panelFormLayout .af_panelFormLayout {
+    padding-left: 0;
+}
+.mahix0614 af|panelFormLayout {
+    clear: both;
+}
+.mahix0614 .af_panelHeader_title0, .mahix0614 .af_panelHeader_title1, .mahix0614 .af_panelHeader_title2, .mahix0614 .af_panelHeader_title3, .mahix0614 .af_panelHeader_title4, .mahix0614 .af_panelHeader_title5 {
+    overflow: visible;
+    white-space: normal;
+}
+.mahix0614 h3 {
+    margin-bottom: 10px;
+}
+.mahix0614 af|selectBooleanCheckbox::item-text, .mahix0614 af|selectManyCheckbox::item-text
+{
+    display: inline;
+    margin-left: 5px;
+    margin-top: 0; 
+    margin-bottom: 0;
+    font-size: inherit;
+}
+.mahix0614 af|selectManyCheckbox::content div {
+    margin-bottom: 10px;
+}
+.mahix0614 af|inputText::label, .mahix0614 af|selectOneChoice::label, .mahix0614 af|selectManyChoice::label {
+    line-height: 2.25;
+}
+.mahix0614 af|panelFormLayout td {
+    padding: 0;
+}
+.mahix0614 af|selectManyCheckbox, .mahix0614 af|selectOneRadio, .mahix0614 af|inputText {
+    margin-bottom: 10px;
+}
+.mahix0614 af|inputText::content {
+    margin: 0;
+}
+.help-block,
+.help-inline {
+  color: #616161;
+}
+.help-block {
+  display: block;
+  line-height: 1.15;
+  font-size: 0.857em;
+  margin: 4px 0;
+}
+.help-inline {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+@agent ie and (version=7) {
+    .help-inline {
+        display: inline;
+        zoom: 1;
+    }
+}
+
+af|goImageLink.return,
+af|commandImageLink.return {
+	margin-bottom: 15px;
+	display: block;
+}
+.page-footer af|goImageLink.return {
+	margin: 0;
+}
+
+
+.shopping-cart-intro {
+	margin-bottom: 10px;
+}
+.shopping-cart-intro af|panelHeader::title-text2 {
+	background: #85b14e;
+	color: #fff;
+	font-weight: normal;
+	margin: 1px 0 0;
+	padding: 10px;
+	border-radius: 8px 8px 0 0;
+}
+.shopping-cart-intro af|panelHeader .plan-count {
+	font-size: .875em; /*14px;*/
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: auto;
+        color: #ffffff;
+}
+.shopping-cart-intro .selection {
+	background: #c1c1c1;
+	padding: 5px 10px;
+}
+.shopping-cart-intro .selection input[type="checkbox"] {
+	margin: 0;
+}
+.shopping-cart-intro .selection af|selectManyCheckbox, .shopping-cart-intro .selection af|selectManyCheckbox div {
+    margin: 0;
+}
+.mahix0614 af|panelHeader {
+    position: relative;
+}
+/****************************************
+ ******** Shopping Cart Slabs ***********
+ ****************************************/
+.cart-slab {
+	border: 1px solid #cdcdcd;
+	background: #fff;
+	margin-top: 10px;
+	padding: 10px 10px 10px 5px;
+}
+
+.cart-slab .cart-selection {
+	width: 20px;
+}
+.cart-slab .cart-selection input[type="checkbox"] {
+	padding: 0;
+	vertical-align: top;
+}
+.cart-slab .cart-cereal-box-wrap {
+	width: 167px;
+}
+.cart-slab .cart-info {
+	padding: 0 10px 0 20px;
+	font-size: 0.95em;
+	line-height: .95;
+}
+.cart-slab .cart-info .paragraph {
+	color: #495a76;
+	margin-bottom: 4px;
+	font-size: 1.2em;
+	line-height: 1.15;
+}
+.cart-slab .cart-info ul {
+	margin-left: 13px;
+        padding: 0;
+        line-height: 1.35;
+        margin-bottom: 10px;
+}
+af|panelGroupLayout.cereal-box-drawer {
+	margin-left: 13px;
+	border: 1px solid #bfbfbf;
+	background: #efedec;
+	margin-top: -1px;
+	width: 151px;
+	font-size: 0.85em;
+	line-height: 1.25;
+	color: #666;
+}
+.cereal-box-drawer .coverage-effective-date {
+	display: block;
+	padding: 2px 4px;
+        text-transform: uppercase;
+        font-size: 0.9em;
+}
+.cereal-box-drawer .covered-members {
+	display: block;
+	padding: 2px 4px;
+        font-weight: bold;
+        font-size: 0.9em;
+}
+.mahix0614 .cereal-box, .mahix0614 .cereal-box-small {
+    float: none;
+}
+.mahix0614 .table-no-header af|column::column-header-cell {
+    display: none;
+    visibility: hidden;
+}
+.mahix0614 af|table {
+    background-color: transparent;
+    -tr-padding-left-width: 8px;
+    -tr-padding-right-width: 8px;
+}
+.mahix0614 af|table.table-bordered {
+    -tr-border-left-width: 1px;
+    -tr-border-right-width: 1px;
+    border-collapse: collapse;
+    border-style: solid;
+    border-radius: 4px;
+}
+.mahix0614 af|table,
+.mahix0614 .AFTableCellData:alias,
+.mahix0614 .AFTableCellHeaderBorder:alias,
+.mahix0614 af|column::column-header-cell,
+.mahix0614 af|column::data-cell,
+.mahix0614 af|column::banded-data-cell {
+    border-color: #dddddd;
+}
+.mahix0614 .table-striped af|column::data-cell,
+.mahix0614 .table-striped af|column::banded-data-cell,
+.mahix0614 .table-bordered af|column::data-cell,
+.mahix0614 .table-bordered af|column::banded-data-cell,
+.mahix0614 .table-striped.table-bordered af|column::data-cell,
+.mahix0614 .table-striped.table-bordered af|column::banded-data-cell,
+.mahix0614 .table-striped.table-bordered.message-table af|column::data-cell
+.mahix0614 .table-striped.table-bordered.message-table af|column::banded-data-cell {
+    padding: 0;
+}
+.mahix0614 af|table af|column::data-cell {
+  vertical-align: top;
+}
+.mahix0614 af|column::data-cell {
+    background: transparent;
+}
+.mahix0614 af|table.table-striped af|column::data-cell {
+    background: #f9f9f9;
+}
+.mahix0614 af|column::banded-data-cell {
+    background: transparent;
+}
+.mahix0614 .AFTableCellPadding:alias {
+    padding: 8px;
+}
+.mahix0614 af|column::column-header-cell {
+    vertical-align: top;
+    background: #f7f7f7; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f7f7f7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f7f7f7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f7f7f7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#f7f7f7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f7f7f7 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#f7f7f7 100%); /* W3C */
+}
+agent ie and (version:6) and (version:7) and (version:8) {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 );
+}
+@agent ie and (version=9) {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+}
+af|column::column-header-cell-content {
+    font-weight: bold;
+    /*font-size: 12px;*/
+}
+.mahix0614 .table-bordered af|column::column-header-table,
+.mahix0614 .table-bordered af|column::column-header-table af|column::column-header-cell:first-child {
+    border-top-left-radius: 4px;
+}
+.mahix0614 af|column::column-header-table,
+.mahix0614 af|column::column-header-table af|column::column-header-cell:last-child {
+    border-top-right-radius: 4px;
+}
+.mahix0614 af|column::column-header-table tr th:last-child,
+.mahix0614 af|table::data-row td:last-child {
+    border-right: none;
+}
+.mahix0614 af|inputDate::label {
+    padding: 0 10px 0 20px;
+}
+
+.mahix0614 af|table af|column::data-cell.checkbox-column,
+.mahix0614 af|table af|column::banded-data-cell.checkbox-column {
+    text-align: center !important;
+    padding: 8px 0 !important;
+}
+
+
+.mahix0614 af|panelHeader::title1 {
+    margin: 15px 0 10px;
+}
+.mahix0614 af|panelHeader::title-text1 {
+    font-weight: normal;
+    color: #000000;
+    margin: 0;
+    font-size: 1.4285em;
+}
+.mahix0614 af|panelGroupLayout.page-intro {
+    box-shadow: 0 0 2px #aaaaaa;
+    margin-top: 0;
+}
+.mahix0614 af|panelGroupLayout.content-main,
+.mahix0614 af|panelGroupLayout.content-flush {
+    padding: 0;
+}
+.mahix0614 af|panelGroupLayout.content-flush .content-wrap,
+.content-full-width .content-wrap {
+    padding: 20px;
+}
+.mahix0614 af|panelGroupLayout.content-main .content-wrap {
+    padding: 47px 20px 20px;
+}
+
+/****************************************
+ ************* PANEL TABS ***************
+ ****************************************/
+af|panelTabbed {
+    -tr-tab-bar-height: 3em;
+}
+af|panelTabbed::header,
+af|panelTabbed::footer{
+    background-image: none;
+}
+af|panelTabbed::header af|panelTabbed::tab {
+    margin-right: 0;
+}
+af|panelTabbed::header {
+    border-bottom: 1px solid #c6c6c6;
+    padding: 0 20px;
+    margin: 0 -20px;
+}
+af|panelTabbed::body {
+    padding-top: 10px;
+}
+af|panelTabbed::header af|panelTabbed::tab af|panelTabbed::tab-start,
+af|panelTabbed::header af|panelTabbed::tab af|panelTabbed::tab-end,
+af|panelTabbed::header af|panelTabbed::tab af|panelTabbed::tab-content {
+    background-color: #dedede;
+    -tr-rule-ref: selector(".text-color-default");
+    border-color: #c6c6c6;
+    border-width: 1px;
+    border-bottom-width: 0;
+    border-style: solid;
+    line-height: 2.75em;
+}
+af|panelTabbed::header af|panelTabbed::tab af|panelTabbed::tab-start,
+af|panelTabbed::header af|panelTabbed::tab af|panelTabbed::tab-end {
+    width: 8px;
+    border-bottom-width: 0;
+}
+af|panelTabbed::header af|panelTabbed::tab af|panelTabbed::tab-start {
+    border-right-width: 0;
+    -webkit-border-radius: 8px 0 0 0;
+       -moz-border-radius: 8px 0 0 0;
+            border-radius: 8px 0 0 0;
+}
+af|panelTabbed::header af|panelTabbed::tab af|panelTabbed::tab-end {
+    border-left-width: 0;
+    -webkit-border-radius: 0 8px 0 0;
+       -moz-border-radius: 0 8px 0 0;
+            border-radius: 0 8px 0 0;
+}
+af|panelTabbed::header af|panelTabbed::tab af|panelTabbed::tab-content {
+    border-top-width: 1px;
+    border-left-width: 0;
+    border-right-width: 0;
+    min-width: 120px;
+    text-align: center;
+}
+af|panelTabbed::header af|panelTabbed::tab:selected af|panelTabbed::tab-start,
+af|panelTabbed::header af|panelTabbed::tab:selected af|panelTabbed::tab-end,
+af|panelTabbed::header af|panelTabbed::tab:selected af|panelTabbed::tab-content {
+    background-color: transparent;
+}
+af|panelTabbed::header af|panelTabbed::tab:disabled  af|panelTabbed::tab-start,
+af|panelTabbed::header af|panelTabbed::tab:disabled af|panelTabbed::tab-end,
+af|panelTabbed::header af|panelTabbed::tab:disabled af|panelTabbed::tab-content {
+    background-color: #dedede;
+    color: #999999;
+}
+af|panelTabbed::header af|panelTabbed::tab af|panelTabbed::tab-text-link,
+af|panelTabbed::header af|panelTabbed::tab af|panelTabbed::tab-text-link:hover{
+    text-decoration: none;
+    -tr-rule-ref: selector(".text-color-link");
+}
+af|panelTabbed::header af|panelTabbed::tab:selected af|panelTabbed::tab-text-link {
+    font-weight: normal;
+    -tr-rule-ref: selector(".text-color-default");
+}
+.affirmation-checkbox label {
+    margin-bottom: 0;
+}
+.padded-controls {
+    padding-top: 2.25em;
+}
+af|panelList.unstyled ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+/***************************************************/
+/*****************CART SKINNING*********************/
+/***************************************************/
+
+
+
+/* for WT2B*/
+.rght_txttuner{margin-right: 33%;margin-top: -15px;}
+
+.combotuner{ margin-right: 100px;}
+
+af|panelGroupLayout.src_mre_text_link{padding-top:8px;}
+
+af|panelGroupLayout.csr_scrn_tuning{padding:20px 20px;}
+
+af|panelGroupLayout.table-details_tuner {margin-bottom: 15px;}
+
+af|panelGroupLayout.table-details_tuner tbody tr td {width:200px;}
+
+af|outputLabel.label{font-weight:bold;font-size:1em;border: none;padding-left: 0;padding-right:5px;}
+
+af|outputText.field{text-align:left;}
+
+af|panelGroupLayout.table-details_tuner af|inputText::content{height:150px;resize:none;}
+
+af|panelGroupLayout.content-wrap .page-intro{padding:20px;}
+
+af|panelGroupLayout.tableNoLabel af|selectBooleanCheckbox::label{display:none;}
+
+/* end WT2B*/
+
+af|panelGroupLayout.filter-date-range {
+    float: right;
+}
+af|panelGroupLayout.filter-date-range af|inputDate::label {
+    padding: 0 10px 0 20px;
+}
+af|panelGroupLayout.filter-date-range af|inputDate::content {
+    width: 90px;
+}
+
+af|panelGroupLayout.tabular af|panelLabelAndMessage {
+    width: 100%;
+}
+af|panelGroupLayout.tabular af|panelLabelAndMessage::label {
+    padding-right: 8px;
+    text-align: left;
+    font-weight: bold;
+    color: #616161;
+    vertical-align: top;
+    font-size: 12px;
+}
+af|panelGroupLayout.tabular af|panelLabelAndMessage::content-cell {
+    text-align: right;
+    font-size: 12px;
+}
+af|panelGroupLayout.tabular af|panelLabelAndMessage.total af|panelLabelAndMessage::content-cell {
+    font-weight: bold;
+}
+af|panelLabelAndMessage.separator {
+    border-bottom: 1px solid #616161;
+    border-left: none;
+    margin: 0 0 5px;
+    padding: 0;
+}
+af|column::column-header-cell {
+    vertical-align: top;
+}
+
+
+af|navigationPane-buttons.horizontal-tabs {
+    overflow: hidden;
+    margin: 0 -20px 20px;
+    padding: 0 20px;
+    border-bottom: 1px solid #dedede;
+}
+af|navigationPane-buttons.horizontal-tabs::link {
+    display: block;
+    padding: 0 10px;
+    border: 1px solid #dedede;
+    border-radius: 8px 8px 0 0;
+    width: 158px;
+    float: left;
+    white-space: normal;
+    height: 3em;
+    line-height: 3;
+    background: #e6e6e6;
+    text-decoration: none;
+    margin-bottom: -1px;
+}
+af|navigationPane-buttons.horizontal-tabs::link span {
+    display: block;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+af|navigationPane-buttons.horizontal-tabs::link.active,
+af|navigationPane-buttons.horizontal-tabs::link:hover {
+    background: #F7F4F1;
+    -tr-rule-ref: selector(".text-color-default");
+}
+af|navigationPane-buttons.horizontal-tabs::link.double {
+    line-height: 1.25;
+}
+af|navigationPane-buttons.horizontal-tabs::link.double span {
+    padding-top: 0.25em;
+}
+af|navigationPane-buttons.horizontal-tabs::icon-style {
+    width: 16px;
+    height: 16px;
+    margin-top: 1em;
+    float: left;
+}
+af|navigationPane-buttons.horizontal-tabs::separator-icon-style {
+    display: none;
+    visibility: hidden;
+}
+.wrap {
+    background: transparent;
+}
+
+
+
+
+
+
+/* Moved color declarations lower so that they take precedence in ADF. The !important directive was not having effect. */
+.blue, .blue h2, .blue h3, .blue h4, .blue h5 {color: #015e82;}
+.dkblue, .dkblue h2, .dkblue h3, .dkblue h4, .dkblue h5,
+.non-portal .dkblue, .non-portal .dkblue h2, .non-portal .dkblue h3, .non-portal .dkblue h4, .non-portal .dkblue h5 {color: #004460;}
+
+
+/**************************************************************/
+/*******************WT5 Skinning - Begin **********************/
+/**************************************************************/
+
+af|panelGroupLayout.tableNoLabel af|selectBooleanCheckbox::label{display:none;}
+
+af|panelFormLayout.mrgnrght{margin-right:100px;}
+
+af|panelGroupLayout.txt_align_left{text-align:left!important;}
+
+af|panelGroupLayout.width_frthcoln{width:280px!important;}
+
+table.width_frthcoln tbody tr td:first-child{width:215px;}
+
+
+af|panelGroupLayout.table-details_tuner tbody tr td {width:260px!important;}
+
+af|outputLabel.labels{font-size:1em;}
+
+.txt_nowrap{white-space:nowrap;}

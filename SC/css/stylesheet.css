@@ -1,0 +1,617 @@
+/**
+ * This stylesheet contains styles used only by the non-portal application (home page, landing pages, etc.).
+ * 
+ * Last taken from revision 28978 of hix.min.css
+ **/
+
+af|document {
+    background: url('/images/static/bg.jpg') left top repeat;
+    line-height: 20px;
+}
+
+
+/* Begin Slider */
+af|panelGroupLayout.slider {
+    margin: 60px 0;
+}
+af|panelGroupLayout.slider af|panelGroupLayout.wrap {
+    overflow: hidden;
+}
+af|panelGroupLayout.slider af|panelGroupLayout.wrap td {
+    vertical-align: middle;
+    background: #F5F3F2;
+}
+af|panelGroupLayout.slider af|panelGroupLayout.wrap td:first-child,
+af|panelGroupLayout.slider af|panelGroupLayout.wrap td td {
+    background: transparent;
+}
+af|panelGroupLayout.slider af|panelGroupLayout.description {
+    background: url("/images/static/add-on-opaque.png") repeat scroll left top transparent;
+    width: 390px;
+}
+af|panelGroupLayout.slider af|panelGroupLayout.description af|panelGroupLayout.wrap {
+    padding: 20px;
+}
+af|panelGroupLayout.slider af|panelGroupLayout.description af|panelHeader::title-text3 {
+    margin: 0 0 10px;
+}
+af|panelGroupLayout.slider af|commandImageLink.nav-prev, af|panelGroupLayout.slider af|commandImageLink.nav-next {
+    width: 34px;
+    display: block;
+    text-align: center;
+}
+af|panelGroupLayout.slider af|panelGroupLayout.content {
+     width: 482px;
+}
+af|panelGroupLayout.slider af|panelGroupLayout.content td {
+    text-align: center;
+}
+af|panelGroupLayout.slider af|panelGroupLayout.content img {
+    width: 150px;
+}
+af|panelGroupLayout.slider .instructions {
+    display: block;
+    text-align: right;
+    margin: 10px 0;
+    color: #6D6E71;
+}
+/* End Slider */
+
+/* Begin Articles */
+af|panelGroupLayout.article {
+     background: url("/images/static/add-on-opaque.png") left top repeat;
+    margin-top: 20px;
+}
+af|panelGroupLayout.article-first-child {
+    margin-top: 0;
+}
+af|panelGroupLayout.article af|panelGroupLayout.article-wrap {
+    padding: 20px;
+}
+af|panelGroupLayout.article af|panelHeader::title-text3 {
+    -tr-rule-ref: selector(".text-color-default");
+}
+/* End Articles */
+
+/* Begin Article Slider */
+af|panelGroupLayout.article-slider {
+    background: #0B5C7E;
+    color: #FFFFFF;
+    margin: 20px 0;
+    padding: 20px;
+}
+af|panelGroupLayout.article-slider af|panelGroupLayout.wrap {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 14.5em;
+}
+af|panelGroupLayout.article-slider af|panelGroupLayout.article {
+    background: transparent;
+    border: medium none;
+    margin: 0;
+    position: relative;
+}
+af|panelGroupLayout.article-slider af|panelGroupLayout.article img.featured {
+     float: left;
+    width: 220px;
+}
+af|panelGroupLayout.article-slider af|panelGroupLayout.article af|panelGroupLayout.article-summary {
+    margin-left: 240px;
+    padding-top: 35px;
+}
+af|panelGroupLayout.article-slider .nav-prev,
+af|panelGroupLayout.article-slider .nav-next {
+    background: url("/images/static/article-slider-nav.png") left top no-repeat;
+    display: block;
+    height: 27px;
+    overflow: hidden;
+    position: absolute;
+    right: 34px;
+    text-indent: -9999px;
+    top: 0;
+    width: 34px;
+}
+af|panelGroupLayout.article-slider .nav-next {
+    background-position: -34px 0;
+    right: 0;
+}
+af|panelGroupLayout.article-slider af|commandLink.nav-prev,
+af|panelGroupLayout.article-slider af|commandLink.nav-next,
+af|panelGroupLayout.article-slider af|commandLink.nav-prev:hover,
+af|panelGroupLayout.article-slider af|commandLink.nav-next:hover {
+    color: #FFFFFF;
+}
+
+af|panelGroupLayout.article-slider af|panelGroupLayout.article-summary af|panelHeader::title-text3 {
+    color: #FFFFFF;
+    margin: 0 78px 10px 0;
+}
+/* End Article Slider */
+
+/* Begin Homepage Showcase (Slideshow) */
+af|panelGroupLayout.showcase {
+    background: url("/images/static/showcase-bottom.png") left bottom repeat-x #25425B;
+    border-top: 1px solid #7E7E7B;
+    height: 374px;
+    padding-bottom: 11px;
+    position: relative;
+    color: #ffffff;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-indicator-wrap {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-indicator-wrap-inner {
+    height: 334px;
+    margin: 0 auto;
+    position: relative;
+    width: 940px;
+    z-index: 50;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-indicator-wrap-inner af|panelList.showcase-indicators {
+    margin: 0;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 5;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-indicator-wrap-inner af|panelList.showcase-indicators ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-indicator-wrap-inner af|panelList.showcase-indicators li a {
+    display: block;
+    background: url("/images/static/showcase-nav.png") left top no-repeat;
+    height: 32px;
+    width: 32px;
+    margin-left: 10px;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-indicator-wrap-inner af|panelList.showcase-indicators li a.active {
+     background: url("/images/static/showcase-nav.png") -32px top no-repeat;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-item {
+    display: none;
+    position: relative;
+    transition: left 0.6s ease-in-out 0s;
+    margin: 0 auto;
+    width: 940px;
+     background: #ffffff;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-item .item-background {
+    position: absolute;
+   margin: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   height: 374px;
+   width: 100%;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-item af|panelGroupLayout.showcase-pagination {
+    position: relative;
+    right: 20px;
+    top: 20px;
+    float: right;
+    z-index: 30;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-item af|panelGroupLayout.showcase-pagination af|commandImageLink {
+    -tr-rule-ref: selector(".text-color-default");
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-item.active {
+    display: block;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-item af|panelGroupLayout.content {
+    position: relative;
+    margin: 0 auto;
+    width: 940px;
+    -tr-rule-ref: selector(".text-color-default");
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-item af|panelGroupLayout.content af|panelGroupLayout.wrap {
+    position: absolute;
+    top: 0;
+    height: 334px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 20px 20px 0;
+    width: 920px;
+    z-index: 25;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-item af|panelGroupLayout.caption {
+    background: url("/images/static/carousel-caption-bg.png") repeat scroll left top transparent;
+    height: 234px;
+    padding: 10px 20px;
+    width: 510px;
+    -tr-rule-ref: selector(".text-color-default");
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelGroupLayout.showcase-tab-content {
+    background: #ffffff;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelGroupLayout.showcase-tab {
+    -tr-rule-ref: selector(".text-color-default");
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelGroupLayout.showcase-tab .btn {
+    margin-left: 20px;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tab-content {
+    display: none;
+    visibility: hidden;
+    position: relative;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tab-content af|panelGroupLayout.showcase-tab {
+    display: none;
+    visibility: hidden;
+    position: relative;
+    height: 310px;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tab-content af|panelGroupLayout.showcase-tab af|panelGroupLayout.wrap {
+    padding: 20px;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tab-content-open,
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tab-content-open af|panelGroupLayout.showcase-tab-active {
+    display: block;
+    visibility: visible;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs {
+    bottom: 11px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 65;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelGroupLayout.links-container {
+    position: relative;
+    height: 65px;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open {
+    top: 0;
+    height: 70px;
+    background: #00415c;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelList.links ul {
+    width: 940px;
+    margin: 0;
+    padding: 0;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelList.links ul li {
+    display: block;
+    float: left;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelList.links ul li a {
+    display: block;
+    text-align: center;
+    background: url("/images/static/showcase-tab-link.png") no-repeat scroll 50% 50% #00415c;
+    margin: 0 15px;
+    padding: 20px;
+    width: 240px;
+    color: #FFFFFF;
+    font-size: 22px;
+    text-decoration: none;
+    line-height: 1;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a {
+    background: transparent;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelList.links ul li a:hover,
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelList.links ul li a:focus {
+    background: #ffffff;
+    color: #004460;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelList.links ul li a.first-child {
+    margin-left: 20px;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelList.links ul li a.link-if,
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-if.active {
+    border-top: 4px solid #4B7C2B;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-if.active {
+    color: #4b7c2b;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelList.links ul li a.link-sb,
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-sb.active {
+    border-top: 4px solid #C56724;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-sb.active {
+    color: #c56724;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|panelList.links ul li a.link-br,
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-br.active {
+    border-top: 4px solid #007D87;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-br.active {
+    color: #007d87;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a,
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-if,
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-sb,
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-br {
+    border-top: none;
+    margin-top: 4px;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-if.active,
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-sb.active,
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|panelList.links ul li a.link-br.active {
+    margin-top: 0;
+    background: #ffffff;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs af|commandImageLink.close {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    right: -20px;
+    top: 24px;
+}
+af|panelGroupLayout.showcase af|panelGroupLayout.showcase-tabs-open af|commandImageLink.close {
+    display: block !important;
+    visibility: visible !important;
+}
+/* Begin Homepage Showcase (Slideshow) */
+
+/* Begin Homepage "bottom-main" */
+af|panelGroupLayout.bottom-main {
+    background: url("/images/static/bottom-bg.jpg") left top repeat #000000;
+    box-shadow: 0 18px 41px -21px #222222 inset;
+    padding: 20px 0;
+    color: #ffffff;
+    min-width: 940px;
+}
+af|panelGroupLayout.bottom-main af|panelGroupLayout.tweets, af|panelGroupLayout.bottom-main af|panelGroupLayout.tweets af|panelHeader::title-text0 {
+    color: #ffffff;
+}
+af|panelGroupLayout.tweets af|panelList ul {
+    list-style: none;
+    padding: 0;
+}
+af|panelGroupLayout.tweets af|panelList ul li .date {
+    font-weight: bold;
+}
+af|panelGroupLayout.tweets af|panelList ul li {
+    margin-bottom: 10px;
+}
+/* End Homepage "bottom-main" */
+
+
+.content-wrap {
+    background: url('/images/static/bg.jpg') left top repeat;
+}
+h1, h2, h3, h4, h5 {
+    color: #252525;
+    font-weight: normal;
+    margin: 10px 0;
+    white-space: normal;
+}
+h1 {
+  font-size: 30.5px;
+  line-height: 1;
+}
+h2 {
+  font-size: 1.85em;
+}
+h3, .h3 {
+  font-weight: bold;
+  font-size: 1.15em;
+}
+.af_panelHeader_title-text-ellipsis {
+    display: none;
+    visibility: hidden;
+}
+af|panelGroupLayout.nav-main {
+    background: url('/images/static/navbar-bg.png') left bottom repeat-x #e7e6e6;
+    border: none;
+    color: #5e5f62;
+}
+af|panelGroupLayout.nav-main .brand {
+    display: block;
+    float: left;
+    margin: 11px 0;
+    padding: 0;
+    color: #5e5f62;
+    
+}
+af|panelGroupLayout.nav-main af|panelGroupLayout.container {
+    overflow: hidden;
+}
+af|panelGroupLayout.nav-main af|panelList::link {
+    color: #5e5f62;
+    text-transform: uppercase;
+}
+af|panelGroupLayout.nav-main af|panelList ul {
+    float: right;
+    display: block;
+    margin: 25px 0 0;
+    list-style: none;
+}
+af|panelGroupLayout.nav-main af|panelList ul li {
+    display: block;
+    float: left;
+    border: none;
+    padding: 0 0.5em;
+    background: url('/images/static/navbar-separator.png') left 50% no-repeat;
+}
+af|panelGroupLayout.nav-main af|panelList ul li:first-child {
+    background: none;
+}
+af|panelGroupLayout.nav-main af|panelList::link {
+    padding: 5px 1em;
+    display: block;
+}
+af|panelGroupLayout.nav-main af|panelList::link:hover,
+af|panelGroupLayout.nav-main af|panelList::link:focus,
+af|panelGroupLayout.nav-main af|panelList::link:active {
+    background: #d5d2d2;
+    color: #6d6e71;
+    text-decoration: none;
+}
+
+/* Begin Landing Page Title */
+af|panelGroupLayout.title-main {
+	background-position: left top;
+	background-repeat: repeat;
+	overflow: hidden;
+}
+af|panelGroupLayout.title-main-if {
+	background: url('/images/static/title-if-bg.jpg') #4B7C2B;
+}
+af|panelGroupLayout.title-main-sb {
+	background: url('/images/static/title-sb-bg.png') #C56724;
+}
+af|panelGroupLayout.title-main-br {
+	background: url('/images/static/title-br-bg.png') #007D87;
+}
+af|panelGroupLayout.title-main h1, af|panelGroupLayout.title-main af|panelHeader::title-text0 {
+        -tr-rule-ref: selector(".accent-font");
+	color: #ffffff;
+}
+af|panelGroupLayout.title-main af|panelHeader::title-start0,
+af|panelGroupLayout.title-main af|panelHeader::title-end0 {
+    display: none;
+    visibility: hidden;
+}
+af|panelGroupLayout.title-main af|panelHeader::content1 {
+    padding: 0;
+}
+af|panelGroupLayout.title-main .introduction {
+	margin-bottom: 10px;
+	padding: 25px 0;
+	font-size: 18px;
+}
+af|panelGroupLayout.title-main-if .introduction {
+	background: #d5dece;
+}
+af|panelGroupLayout.title-main-sb .introduction {
+	background: #e0d4cb;
+}
+af|panelGroupLayout.title-main-br .introduction {
+	background: #ccd9da;
+}
+af|panelGroupLayout.title-main af|panelGroupLayout.actions {
+	text-align: right;
+}
+af|panelGroupLayout.title-main af|panelGroupLayout.actions .btn-primary {
+	margin-right: 10px;
+}
+/* End Landing Page Title */
+
+/* Begin Subnav */
+af|panelGroupLayout.subnav-main af|panelGroupLayout.wrap {
+    padding: 20px 0;
+}
+af|panelGroupLayout.subnav-main af|panelList.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+af|panelGroupLayout.subnav-main af|panelList.nav li {
+    list-style: none;
+    display: inline;
+}
+af|panelGroupLayout.subnav-main af|panelList::link {
+    border-left: 1px solid #D2D1D1;
+    padding: 0 20px;
+    color: #6D6E71;
+    -tr-rule-ref: selector(".accent-font");
+    font-size: 20px;
+}
+af|panelGroupLayout.subnav-main af|panelList::link.first-child {
+    border: none;
+    padding-left: 0;
+}
+af|panelGroupLayout.subnav-main af|panelList::link.active {
+    -tr-rule-ref: selector(".text-color-link");
+}
+/* End Subnav */
+
+/* Begin Main Content */
+af|panelGroupLayout.content-main {
+    padding: 30px 0;
+}
+af|panelGroupLayout.add-on {
+    margin-bottom: 20px;
+}
+.add-on.add-on-if, .add-on.add-on-sb, .add-on.add-on-br{margin-bottom: 0px!important;}
+af|panelGroupLayout.add-on-opaque {
+    background: url('/images/static/add-on-opaque.png') left top repeat;
+}
+af|panelGroupLayout.add-on h3,
+af|panelGroupLayout.add-on h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+af|panelGroupLayout .add-on {
+    padding: 0 20px 20px;
+}
+af|panelGroupLayout.add-on af|panelList ul {
+    margin-bottom: 0;
+    margin-left: 15px;
+    padding: 0;
+}
+af|panelGroupLayout .add-on-preview {
+	background: #e5e6e2;
+        height: 18em;
+        position: relative;
+}
+af|panelGroupLayout .add-on-preview .wrap {
+	padding: 10px;
+        background: transparent;
+}
+af|panelGroupLayout .add-on-preview af|panelGroupLayout.action-buttons {
+    text-align: right;
+}
+af|panelGroupLayout .add-on-preview h2 {
+	background: transparent;
+	padding: 0;
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+af|panelGroupLayout .add-on-if {
+	border-top: 3px solid #4b7c2b;
+        width:300px;
+        padding: 0;
+}
+af|panelGroupLayout .add-on-if h2 {
+	color: #4b7c2b;
+        width:300px;
+}
+af|panelGroupLayout .add-on-sb {
+	border-top: 3px solid #c56724;
+        width:300px;
+        padding: 0;
+}
+af|panelGroupLayout .add-on-sb h2 {
+	color: #c56724; width:300px;
+}
+af|panelGroupLayout .add-on-br {
+	border-top: 3px solid #007d87;
+        width:300px;
+        padding: 0;
+}
+af|panelGroupLayout .add-on-br h2 {
+	color: #007d87; width:300px;
+}
+af|panelGroupLayout .add-on-preview .action-buttons {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+/* End Main Content */
+
+af|inputDate::launch-icon-style{
+    background: url('/images/icons/icon-calendar.png')!important;
+}
+af|panelGroupLayout.heading_inline_btn af|panelGroupLayout.action-buttons{
+    margin-top: -30px;
+}
+af|commandButton.btn-Dental{margin-top:-45px;margin-right:-20px;}
+af|panelGroupLayout.planCost{
+    width: 699px;
+    border:1px solid #DDD;
+    padding:10px;
+    margin-top:-3px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
